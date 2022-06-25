@@ -1,0 +1,23 @@
+.playlist-card {
+  height: 6rem;
+  width: 22rem;
+  border: 2px solid rgb(34, 31, 31);
+  margin: 1rem;
+  display: flex;
+  font-weight: bold;
+  padding: 10px;
+  justify-content: space-between;
+}
+.playlist-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.playlist-trash{
+  font-size: 2.5rem;
+}
+.playlist-name{
+  font-size: 1.2rem;
+}

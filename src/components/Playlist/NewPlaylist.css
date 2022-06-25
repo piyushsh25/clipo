@@ -1,0 +1,20 @@
+.newplaylist{
+    display: flex;
+    justify-content: space-around;
+}
+.newplaylist-header{
+    font-size: 2rem;   
+}
+.newplaylist-call-to-action .button-link{
+    text-decoration: none;
+    color: #ffffff;  
+    font-size: 1.5rem;
+}
+.newplaylist-call-to-action{
+    width: 12rem;
+    height: 3rem;
+    background-color: #ff0000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

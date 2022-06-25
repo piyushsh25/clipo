@@ -3,6 +3,8 @@ import "./App.css";
 import { History } from "./pages/History/History";
 import { HomePage } from "./pages/HomePage/HomePage";
 import { Playlist } from "./pages/Playlist/Playlist";
+import { PlayListUnique } from "./pages/Saved/Saved";
+import { WatchLater } from "./pages/WatchLater/WatchLater";
 function App() {
   return (
     <div className="App">
@@ -11,6 +13,9 @@ function App() {
       <Route path="/" element={<HomePage/>}/>
       <Route path="/playlist" element={<Playlist/>}/>
       <Route path="/history" element={<History/>}/>
+      <Route path="/watchlater" element={<WatchLater/>}/>
+      {/* unique route later */}
+      <Route path="playlist1" element={<PlayListUnique/>}/>
     </Routes>
   </BrowserRouter>
     </div>

@@ -1,7 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import "../Recommended/Recommended.css";
-export function WatchLaterArray() {
+export function SavedArray() {
     const arr = [1, 2, 3, 4, 232, 4, 24, 2, 23, 32, 4323, 3234]
 
     return (

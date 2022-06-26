@@ -1,0 +1,22 @@
+.newplaylist{
+    margin:3rem 0;
+    position: relative;
+}
+.card-description{
+    margin:0 1.2rem;
+    margin-left: auto;
+    font-weight: bolder;
+}
+.fas.fa-heart{
+    position: absolute;
+    font-size: 1.5rem;
+    margin-top: 8px;
+    margin-left: 15rem;
+    color: gray;
+    background-color: white;
+    padding: 4px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,33 @@
+.card {
+  width: 18rem;
+  height: auto;
+  box-shadow: none;
+  margin: 1% 1% 2%;
+}
+.recommended-videos {
+  margin: 0% 5%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+.h3 {
+  margin: 0% 5%;
+  font-size: 2rem;
+  margin: 2% 5%;
+  font-weight: bolder;
+}
+.card:hover {
+  z-index: 999;
+  transform: scale3d(1.2, 1.2, 1.5);
+}
+.card-description {
+  margin: 0 1.2rem;
+  margin-left: auto;
+  font-weight: bolder;
+}
+@media screen and (max-width: 760px) {
+  .recommended-videos {
+    margin: 0;
+  }
+}

@@ -1,0 +1,22 @@
+.video-cta-icons-container{
+    display: flex;
+}
+.video-cta-icons{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+/* the parent div of icons */
+.video-cta-icons div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+}
+/* name of the icons */
+.video-cta-icons div div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}

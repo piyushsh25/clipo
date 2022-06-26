@@ -1,8 +1,11 @@
 import { Card } from "react-bootstrap";
+import { VideoCTA } from "./VideoCTA";
 import "./VideoDescription.css"
 export function VideoDesctiption() {
     return <Card className="video-description">
-        <Card.Header>Quot kef vfdjm efkj fkv jefro kerfje qdeu fvk</Card.Header>
+        <Card.Header className="video-cta-container">
+        <VideoCTA/>
+        </Card.Header>
         <Card.Body>
             <blockquote className="blockquote mb-0">
                 <p>

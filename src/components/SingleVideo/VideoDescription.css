@@ -3,7 +3,8 @@
     margin-top: 26rem;
     width: 61%;
     margin-left: 2rem;
-    transform: none;
+    transform: none !important;
+    transition: none !important;
 }
 
 @media screen and (max-width: 760px) {

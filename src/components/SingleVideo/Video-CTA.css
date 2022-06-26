@@ -1,0 +1,21 @@
+.video-cta-icons-container{
+    display: flex;
+}
+.video-cta-icons{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.video-cta-icons div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+}
+.video-cta-icons div div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}

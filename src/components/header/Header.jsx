@@ -2,9 +2,9 @@ import { Navbar, Button, FormControl,Container,Offcanvas,Nav,NavDropdown,Form } 
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./header.css"
 export function ClipoHeader() {
-    return <>
+    return <div className="header-all">
     {['xxl'].map((expand) => (
-      <Navbar key={expand} bg="light" expand={expand} className="mb-3 navbar-all">
+      <Navbar key={expand} bg="light" expand={expand} className="mb-3 navbar-all" fixed="top">
         <Container fluid>
           <Navbar.Brand href="#" className="header-header-name"><span className="header-first-word">My</span> Clipo</Navbar.Brand>
           <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
@@ -53,5 +53,5 @@ export function ClipoHeader() {
         </Container>
       </Navbar>
     ))}
-  </>
+  </div>
 }

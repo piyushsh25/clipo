@@ -1,0 +1,21 @@
+.recommended-videos-must-watch {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.recommended-videos-header {
+  margin: 0;
+  margin-left: auto;
+}
+@media screen and (max-width: 760px) {
+  .recommended-videos-must-watch {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .newplaylist-header {
+    margin: 0;
+    margin-top: 10rem;
+    margin-left: 2rem;
+  }
+}

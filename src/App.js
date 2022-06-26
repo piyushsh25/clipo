@@ -4,6 +4,7 @@ import { History } from "./pages/History/History";
 import { HomePage } from "./pages/HomePage/HomePage";
 import { Playlist } from "./pages/Playlist/Playlist";
 import { PlayListUnique } from "./pages/Saved/Saved";
+import { VideoPage } from "./pages/VideoPage/VideoPage";
 import { WatchLater } from "./pages/WatchLater/WatchLater";
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
       <Route path="/watchlater" element={<WatchLater/>}/>
       {/* unique route later */}
       <Route path="playlist1" element={<PlayListUnique/>}/>
+      {/* unique id for video */}
+      <Route path="video" element={<VideoPage/>}/>
     </Routes>
   </BrowserRouter>
     </div>

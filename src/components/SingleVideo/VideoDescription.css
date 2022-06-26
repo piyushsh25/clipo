@@ -1,0 +1,18 @@
+.video-description{
+    position: fixed;
+    margin-top: 26rem;
+    width: 61%;
+    margin-left: 2rem;
+    transform: none;
+}
+
+@media screen and (max-width: 760px) {
+    .video-description{
+        position: absolute;
+        margin-top: -1rem;
+        width: 93%;
+        margin-left: 2rem;
+    }
+  }
+
+  

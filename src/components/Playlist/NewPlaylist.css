@@ -1,6 +1,7 @@
 .newplaylist{
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
+    margin-left: 2rem;
 }
 .newplaylist-header{
     font-size: 2rem;   

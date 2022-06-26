@@ -1,6 +1,9 @@
 .navbar-all{
 padding: 0 5%;
 }
+.header-all{
+    margin-bottom: 8rem;
+}
 .header-header-name{
 font-size: 2.5rem;
 }

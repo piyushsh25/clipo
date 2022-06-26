@@ -4,10 +4,11 @@ import { History } from "./pages/History/History";
 import { HomePage } from "./pages/HomePage/HomePage";
 import { Login } from "./pages/Login/Login";
 import { Playlist } from "./pages/Playlist/Playlist";
-import { PlayListUnique } from "./pages/Saved/Saved";
+import { PlayListUnique } from "./pages/IndividualPlaylist/Saved";
 import { Signup } from "./pages/Signup/Signup";
 import { VideoPage } from "./pages/VideoPage/VideoPage";
 import { WatchLater } from "./pages/WatchLater/WatchLater";
+import { CreatePlaylist } from "./pages/CreatePlayList/CreatePlaylist";
 function App() {
   return (
     <div className="App">
@@ -20,9 +21,10 @@ function App() {
       {/* unique route later */}
       <Route path="playlist1" element={<PlayListUnique/>}/>
       {/* unique id for video */}
-      <Route path="video" element={<VideoPage/>}/>
+      <Route path="/video" element={<VideoPage/>}/>
       <Route path="/login" element={<Login/>}/>
       <Route path="/signup" element={<Signup/>}/>
+      <Route path="/create-playlist" element={<CreatePlaylist/>}/>
     </Routes>
   </BrowserRouter>
     </div>

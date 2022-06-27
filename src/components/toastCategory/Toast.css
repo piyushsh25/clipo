@@ -23,7 +23,7 @@ input[type="radio"] + label,
 }
 input[type="radio"]:checked + label {
   background-image: none;
-  background-color: #d0d0d0;
+  background-color: #a4a2a2;
 }
 /* .clear-filter{
     cursor: pointer;

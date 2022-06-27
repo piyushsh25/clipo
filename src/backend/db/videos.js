@@ -61,7 +61,7 @@ export const videos = [
     description:
       "Projects to make for Frontend Development | Frontend Developer Roadmap ft @Akshay Saini ",
     creator: "Riddhi Dutta",
-    categoryName: "Backend Development",
+    categoryName: "Frontend Development",
     createdAt: formatDate(),
     updatedAt: formatDate(),
   }, {

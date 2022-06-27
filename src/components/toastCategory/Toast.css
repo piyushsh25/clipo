@@ -1,25 +1,35 @@
-.homepage-filter{
-    width: auto;
-    padding: 4px 1rem;
-    border-radius: 12px;
-    border-style: none;
-    display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 1rem;
+.homepage-filter {
+  width: auto;
+  padding: 4px 1rem;
+  border-radius: 12px;
+  border-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 1rem;
 }
-input[type=radio] {
-    display:none; 
-    margin:10px;
+input[type="radio"] {
+  display: none;
+  margin: 10px;
 }
-input[type=radio] + label {
-    display:inline-block;
+input[type="radio"] + label,
+.clear-filter {
+  display: inline-block;
+  margin: -2px;
+  padding: 4px 12px;
+  background-color: #e7e7e7;
+  border-color: rgb(0, 0, 0);
+  border-radius: 12px;
+  cursor: pointer;
+}
+input[type="radio"]:checked + label {
+  background-image: none;
+  background-color: #d0d0d0;
+}
+/* .clear-filter{
+    cursor: pointer;
     margin:-2px;
     padding: 4px 12px;
     background-color: #e7e7e7;
     border-color: rgb(0, 0, 0);
     border-radius: 12px;
-}
-input[type=radio]:checked + label { 
-    background-image: none;
-     background-color:#d0d0d0;
- }
+ } */

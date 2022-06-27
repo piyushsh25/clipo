@@ -1,21 +1,253 @@
-/**
- * Videos Database can be added here.
- * You can add videos of your wish with different attributes
- * */
-
+import { v4 as uuid } from "uuid";
+import { formatDate } from "../utils/authUtils";
 export const videos = [
   {
-    _id: "Wo5dMEP_BbI",
-    title: "Awesome Video about Coding",
+    _id: uuid(),
+    thumbnail: "	https://i.ytimg.com/vi/-_X6PhkjpzU/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLAhCOfUy5SACf0qQv9J6J9w2LlaiA",
+    videoLink: "https://www.youtube.com/watch?v=-_X6PhkjpzU",
+    duration: 541,
+    title: "5 Front-end Development Skills to Land Your First Job",
     description:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-    creator: "Soham Shah",
+      "Everything you need to know in a simple path to get hired fast. This video is the second part of my Web Development series. In the first part, we covered 5 facts about web development.",
+    creator: "Programming with Mosh",
+    categoryName: "Frontend Development",
+    createdAt: formatDate(),
+    updatedAt: formatDate(),
   },
   {
-    _id: "F_Riqjdh2oM",
-    title: "Neural Networks from Scratch - P.1 Intro and Neuron Code",
-    creator: "Sentdex",
+    _id: uuid(),
+    thumbnail: "https://i.ytimg.com/vi/BBpAmxU_NQo/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLDlq5jN2Yg6kN-Tc8MghwAqW9W_LA",
+    videoLink: "https://www.youtube.com/watch?v=BBpAmxU_NQo",
+    duration: 4722,
+    title: "Data Structures and Algorithms for Beginners ",
     description:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+      "Data Structures and algorithms for beginners. Ace your coding interview. Watch this tutorial to learn all about Big O, arrays and linked lists!",
+    creator: "Programming with Mosh",
+    categoryName: "DSA",
+    createdAt: formatDate(),
+    updatedAt: formatDate(),
   },
+  {
+    _id: uuid(),
+    thumbnail: "https://i.ytimg.com/vi/reY50t2hbuM/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLAALNyjCWkBxj8AY2yIOYaSqXQ9lA",
+    videoLink: "https://www.youtube.com/watch?v=reY50t2hbuM",
+    duration: 378,
+    categoryName: "AI / ML",
+    title: "Why You Should NOT Learn Machine Learning!",
+    description:
+      "Everyone tells you why you should be learning machine learning. It is the next 'big thing' after all. But in this video I'm going to be telling you why you should NOT learn machine learning.",
+    creator: "Smitha Kolan - Machine Learning Engineer",
+    createdAt: formatDate(),
+    updatedAt: formatDate(),
+  },
+  {
+    _id: uuid(),
+    thumbnail: "https://i.ytimg.com/vi/qyHyFsT7Hig/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLCHcQe2zORiDFxb0ZbFiXxJwgp2QQ",
+    videoLink: "https://www.youtube.com/watch?v=qyHyFsT7Hig",
+    duration: 178,
+    title: "Frontend Development explained in 2 minutes // Tech in 2 ",
+    description:
+      "Welcome to Tech in 2! Hope you all like this new series. Comment below with what technologies/programming languages/frameworks/etc you'd like for me to cover! ",
+    creator: "mayuko",
+    categoryName: "Frontend Development",
+    createdAt: formatDate(),
+    updatedAt: formatDate(),
+  }, {
+    _id: uuid(),
+    thumbnail: "	https://i.ytimg.com/vi/XXaZLdBaDqY/hqdefault.jpg?s…AFwAcABBg==&rs=AOn4CLDwGihRycNcJClUdsETFe7cdtDe3A",
+    videoLink: "https://www.youtube.com/watch?v=XXaZLdBaDqY",
+    duration: 2396,
+    title: "Projects to make for Frontend Development | Frontend Developer Roadmap ft @Akshay Saini ",
+    description:
+      "Projects to make for Frontend Development | Frontend Developer Roadmap ft @Akshay Saini ",
+    creator: "Riddhi Dutta",
+    categoryName: "Backend Development",
+    createdAt: formatDate(),
+    updatedAt: formatDate(),
+  }, {
+    _id: uuid(),
+    thumbnail: "https://i.ytimg.com/vi/cbSrsYiRamo/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLDiEx8yl3tsSrH_l9wXGbOBiHU0yQ",
+    videoLink: "https://www.youtube.com/watch?v=cbSrsYiRamo",
+    duration: 188,
+    title: "Backend Development explained in 2 minutes // Tech in 2",
+    description:
+      "Welcome to Tech in 2! Today we're covering what Backend Development is!",
+    creator: "mayuko",
+    categoryName: "Backend Development",
+    createdAt: formatDate(),
+    updatedAt: formatDate(),
+  },
+  {
+    _id: uuid(),
+    thumbnail: "	https://i.ytimg.com/vi/76dhtgZt38A/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLAleEeRuFBy4cgJNHFUFfnku1fTpQ",
+    videoLink: "https://www.youtube.com/watch?v=76dhtgZt38A",
+    duration: 3057,
+    categoryName: "DSA",
+    title: "6. Binary Trees, Part 1    ",
+    description:
+      "This is the first of two lectures on binary trees. This lecture discusses binary tree terminology, tree navigation, and dynamic operations. These are explored in two applications: sets and sequences.      ",
+    creator: "MIT OpenCourseWare",
+    createdAt: formatDate(),
+    updatedAt: formatDate(),
+  },
+  {
+    _id: uuid(),
+    thumbnail: "https://i.ytimg.com/vi/EZknw_OXk5M/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLBr7Ame5lEjfzuw576T5FIlaE26mA",
+    videoLink: "https://www.youtube.com/watch?v=EZknw_OXk5M",
+    duration: 286,
+    title: "Junior Backend Developer Portfolio Projects",
+    description:
+      "In this video, I got through 5 different backend projects that a junior developer could work on for their portfolio! Let me know if you have any questions or comment video ideas!",
+    creator: "Sarah Amann",
+    categoryName: "Backend Development",
+    createdAt: formatDate(),
+    updatedAt: formatDate(),
+  },  {
+    _id: uuid(),
+    thumbnail: "https://i.ytimg.com/vi/QWGbXU7pi4w/hqdefault.jpg?s…AFwAcABBg==&rs=AOn4CLDdycpAB1fI1ONdPABzKiFZwjXV1w",
+    videoLink: "https://www.youtube.com/watch?v=QWGbXU7pi4w",
+    duration: 584,
+    categoryName: "DSA",
+    title: "Don't Use DSA Questions Sheets for Interview Preparation!",
+    description:
+      "In this video I have explained why using X+ DSA questions sheets for interview preparation is a bad idea and shared the right approach when preparing for coding interviews.",
+    creator: "Kunal Kushwaha",
+    createdAt: formatDate(),
+    updatedAt: formatDate(),
+  },
+  {
+    _id: uuid(),
+    thumbnail: "	https://i.ytimg.com/vi/0Kv_k4ypj6o/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLDHJ0eQkgk7ObYliUnLzb0xh_0fRw",
+    videoLink: "https://www.youtube.com/watch?v=0Kv_k4ypj6o",
+    duration: 625,
+    title: "What You Need to Know to be a Backend Developer ",
+    description:
+      "There are generally two parts to any web application: the front end, or client side, and the back end, or server side. The front end consists of the web pages you see and interact with in your browser. Those pages are usually designed by front end developers.",
+    creator: "Treehouse",
+    categoryName: "Backend Development",
+    createdAt: formatDate(),
+    updatedAt: formatDate(),
+  },
+  {
+    _id: uuid(),
+    thumbnail: "https://i.ytimg.com/vi/iN7cAHpBA9s/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLC9o4h0ZZkIBlvpErgoTyjJVJfU_Q",
+    videoLink: "https://www.youtube.com/watch?v=iN7cAHpBA9s",
+    duration: 881,
+    categoryName: "AI / ML",
+    title: "My Journey Learning ML and AI through Self Study - Sachi Parikh - ML4ALL 2019",
+    description:
+      "My Journey Learning ML and AI through Self Study as a High School Student Sachi Parikh",
+    creator: "ML4ALL",
+    createdAt: formatDate(),
+    updatedAt: formatDate(),
+  },
+  {
+    _id: uuid(),
+    thumbnail: "https://i.ytimg.com/vi/aZkG0b6oi4s/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLD7bX3YKKFafF60oZ9FAH6dFUlWSg",
+    videoLink: "https://www.youtube.com/watch?v=aZkG0b6oi4s",
+    duration: 671,
+    title: "Backend Developer Roadmap 2021 | How to Become a Backend Developer ",
+    description:
+      "In this video, I talk about how to become a backend developer. I give a roadmap for you to learn frontend development. If you're looking to become a backend/full-stack developer, there has been no better option ",
+    creator: "codedamn",
+    categoryName: "Backend Development",
+    createdAt: formatDate(),
+    updatedAt: formatDate(),
+  },
+  {
+    _id: uuid(),
+    thumbnail: "https://i.ytimg.com/vi/udt-kvHNt_o/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLAtrSU9SNhdfXScQ_Bt2tubXAyjvw",
+    videoLink: "https://www.youtube.com/watch?v=udt-kvHNt_o",
+    duration: 1715,
+    categoryName: "DSA",
+    title: "How to Learn Data Structures & Algorithms in 90 Days? | Complete DSA Roadmap",
+    description:
+      "This is a complete DSA roadmap that you can use to learn problem solving and crack coding interviews.",
+    creator: "Ishan Sharma",
+    createdAt: formatDate(),
+    updatedAt: formatDate(),
+  },
+  
+  {
+    _id: uuid(),
+    thumbnail: "	https://i.ytimg.com/vi/76dhtgZt38A/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLAleEeRuFBy4cgJNHFUFfnku1fTpQ",
+    videoLink: "https://www.youtube.com/watch?v=WSbgixdC9g8",
+    duration: 889,
+    categoryName: "AI / ML",
+    title: "AI vs Machine Learning vs Deep Learning | Machine Learning Training with Python | Edureka",
+    description:
+      "This Edureka Machine Learning tutorial (Machine Learning Tutorial with Python Blog:  https://goo.gl/fe7ykh ) on AI vs Machine Learning vs Deep Learning talks about the differences and relationship between AL, Machine Learning and Deep Learning. Below are the topics covered in this tutorial:",
+    creator: "edureka",
+    createdAt: formatDate(),
+    updatedAt: formatDate(),
+  },
+  {
+    _id: uuid(),
+    thumbnail: "https://i.ytimg.com/vi/lYWt-aCnE2U/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLDh_c3WRE3b4_Grk8gNzD_QItcxtA",
+    videoLink: "https://www.youtube.com/watch?v=iN7cAHpBA9s",
+    duration: 5261,
+    categoryName: "AI / ML",
+    title: "Introduction to ML and AI - MFML Part 1 ",
+    description:
+      "Making Friends with Machine Learning was an internal-only Google course specially created to inspire beginners and amuse experts. Today, it is available to everyone! This is the first hour-and-a-half of a six hour session.     ",
+    creator: "Cassie Kozyrkov",
+    createdAt: formatDate(),
+    updatedAt: formatDate(),
+  },
+  {
+    _id: uuid(),
+    thumbnail: "https://i.ytimg.com/vi/CHhwJjR0mZA/hqdefault.jpg?s…AFwAcABBg==&rs=AOn4CLA7-e0u-ajdpC5zyNhqB3r8Ct81sw",
+    videoLink: "https://www.youtube.com/watch?v=CHhwJjR0mZA",
+    duration: 3017,
+    categoryName: "DSA",
+    title: "2. Data Structures and Dynamic Arrays ",
+    description:
+      "Data structures are ways to store data with algorithms that support opperations on the data. These collection of osrted operations are interfaces. This class goes over two main interfaces: sequence and set.  ",
+    creator: "MIT OpenCourseWare",
+    createdAt: formatDate(),
+    updatedAt: formatDate(),
+  },
+
+  {
+    _id: uuid(),
+    thumbnail: "https://i.ytimg.com/vi/UlG62IXqa5k/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLCRkPAANm1EjehYtJQPMIEWzHGDMg",
+    videoLink: "What does a Frontend Developer Actually Do?",
+    duration: 811,
+    title: "What does a Frontend Developer Actually Do? ",
+    description:
+      "What's up, everyone! Thanks to today's sponsor Webroot! To receive 50% off their Internet Security Complete with Antivirus software, check out the links below on their site and on Amazon! Stay safe in 2021 by protecting your computer from cybersecurity threats!",
+    creator: "gyasi linje",
+    categoryName: "Frontend Development",
+    createdAt: formatDate(),
+    updatedAt: formatDate(),
+  },
+
+
+  {
+    _id: uuid(),
+    thumbnail: "	https://i.ytimg.com/vi/9QErWiClGjM/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLDXN_1IK_9AEEE8GU2duj14C0ydEw",
+    videoLink: "https://www.youtube.com/watch?v=9QErWiClGjM",
+    duration: 631,
+    categoryName: "AI / ML",
+    title: "What’s The Difference Between Artificial Intelligence And Machine Learning",
+    description:
+      "In this video I explain the difference between AI and ML and how both can be used in business to solve real world problems. If you would like more information on this topic, please feel free to visit my website and sign up for content updates! I write articles every week on various different topics such as Big Data, Artificial Intelligence & Machine Learning.",
+    creator: "Bernard Marr",
+    createdAt: formatDate(),
+    updatedAt: formatDate(),
+  },
+  {
+    _id: uuid(),
+    thumbnail: "	https://i.ytimg.com/vi/l7XxVX2cXfg/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLCvwtSOgfUzFPDoyGFvJ0-aVW7HRw",
+    videoLink: "https://www.youtube.com/watch?v=l7XxVX2cXfg",
+    duration: 434,
+    title: "How To Become a Junior Front End Developer in 2022 | No Experience ",
+    description:
+      "Learning Front End Development is hard and many people fail along the way. I am gonna share with you what I would do differently If I had to learn it again. As a junior programmer, you want to maximize your time and be effective. You can learn from my mistakes and become a developer way quicker than I did. ",
+    categoryName: "Frontend Development",
+    creator: "marty",
+    createdAt: formatDate(),
+    updatedAt: formatDate(),
+  },
+  
 ];

@@ -26,6 +26,9 @@
   margin-left: auto;
   font-weight: bolder;
 }
+.recommended-videos .card-img-top{
+  max-height: 10rem;
+} 
 @media screen and (max-width: 760px) {
   .recommended-videos {
     margin: 0;

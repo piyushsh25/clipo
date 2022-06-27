@@ -4,3 +4,10 @@
 .img-featured{
     height: 50vh;
 }
+.featured-title{
+    font-size: 2rem;
+}
+
+.featured-cta.btn.active.btn-secondary.btn-lg{
+    background-color: black;
+}

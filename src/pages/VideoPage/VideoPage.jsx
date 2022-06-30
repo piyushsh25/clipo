@@ -4,11 +4,8 @@ import { Video } from "../../components/SingleVideo/Video";
 import { useFilterContext } from "../../hooks/CategoryFilter/FilterContext";
 import { useVideo } from "../../hooks/useVideo";
 export function VideoPage() {
-    const { video } = useVideo();
     const {FilteredVideo}=useFilterContext()
     const { videoId } = useParams();
-    console.log(videoId)
-    console.log(video)
     function findVideoDetails(video, videoId) {
         return video.find((videos) => videos._id === videoId)
     }

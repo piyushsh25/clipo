@@ -7,7 +7,7 @@ export function ClipoHeader() {
     {['xxl'].map((expand) => (
       <Navbar key={expand} bg="light" expand={expand} className="mb-3 navbar-all" fixed="top">
         <Container fluid>
-          <Navbar.Brand href="#" className="header-header-name"><span className="header-first-word">My</span> Clipo</Navbar.Brand>
+          <Link to="/" className="header-header-link"><Navbar.Brand className="header-header-name"><span className="header-first-word">My</span> Clipo</Navbar.Brand></Link>
           <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
           <Navbar.Offcanvas
             id={`offcanvasNavbar-expand-${expand}`}

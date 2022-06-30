@@ -2,7 +2,6 @@ import { Card } from "react-bootstrap";
 import { VideoCTA } from "./VideoCTA";
 import "./VideoDescription.css"
 export function VideoDesctiption(details) {
-    console.log(details.details)
     return <Card className="video-description">
         <Card.Header className="video-cta-container">
             <VideoCTA />

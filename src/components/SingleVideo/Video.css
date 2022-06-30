@@ -2,8 +2,8 @@
   width: 60vw;
   height: 60vh;
   margin-left: 2rem;
-  margin-bottom: 2rem;
   position: fixed;
+
 }
 .video-body {
   display: flex;

@@ -7,7 +7,8 @@ import { VideoDesctiption } from "./VideoDescription"
 import { VideoHeader } from "./VideoHeader"
 
 export function Video(details) {
-    return <><div className="video-body">
+    return <>
+    <div className="video-body">
         <Ratio aspectRatio="16x9" className="video-content">
             <iframe title="image/svg+xml" src={details.videoLink} />
         </Ratio>

@@ -1,10 +1,13 @@
 .video-cta-icons-container{
     display: flex;
+
 }
 .video-cta-icons{
     display: flex;
     justify-content: space-between;
     width: 50%;
+    margin: 0;
+    padding: 0;
 }
 /* the parent div of icons */
 .video-cta-icons div{

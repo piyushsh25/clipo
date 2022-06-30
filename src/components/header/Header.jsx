@@ -1,6 +1,7 @@
 import { Navbar, Button, FormControl,Container,Offcanvas,Nav,NavDropdown,Form } from "react-bootstrap"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./header.css"
+import {Link} from "react-router-dom"
 export function ClipoHeader() {
     return <div className="header-all">
     {['xxl'].map((expand) => (
@@ -15,13 +16,13 @@ export function ClipoHeader() {
           >
             <Offcanvas.Header closeButton>
               <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                Cliop
+                <Link to="/">My Clipo</Link>
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-3">
-                <Nav.Link href="#action1">Home</Nav.Link>
-                <Nav.Link href="#action2">Subscriptions</Nav.Link>
+                <Nav.Link href="/">Home</Nav.Link>
+                <Nav.Link href="/playlist">Playlist</Nav.Link>
                 <NavDropdown
                   title="More"
                   id={`offcanvasNavbarDropdown-expand-${expand}`}
@@ -30,7 +31,7 @@ export function ClipoHeader() {
                   <NavDropdown.Item href="#action4">
                     Liked Videos
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="#action5">
+                  <NavDropdown.Item href="/watchlater">
                     WatchLater
                   </NavDropdown.Item>
                   <NavDropdown.Divider />

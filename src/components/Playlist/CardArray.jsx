@@ -6,13 +6,13 @@ export function CardArray() {
         <NewPlaylist />
         <div className="playlist-container">
             {arr.map((num) => {
-                return <div class="playlist-card">
+                return <div className="playlist-card">
                     <div className="playlist-name">
                         <div>  My playlist {num} </div>
                         <div> 10 videos </div>
                     </div>
                     <div className="playlist-trash">
-                        <i class="fa fa-trash" aria-hidden="true"></i>
+                        <i className="fa fa-trash" aria-hidden="true"></i>
                     </div>
                 </div>
             })}

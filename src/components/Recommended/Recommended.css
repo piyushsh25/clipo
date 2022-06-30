@@ -26,6 +26,13 @@
   margin-left: auto;
   font-weight: bolder;
 }
+.recommended-videos .card-img-top{
+  max-height: 10rem;
+} 
+.watch-now-link{
+  text-decoration: none;
+  color: #ffffff;
+}
 @media screen and (max-width: 760px) {
   .recommended-videos {
     margin: 0;

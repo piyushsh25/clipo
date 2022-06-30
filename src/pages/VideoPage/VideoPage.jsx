@@ -1,9 +1,20 @@
+import { useParams } from "react-router-dom";
 import { ClipoHeader } from "../../components/header/Header";
 import { Video } from "../../components/SingleVideo/Video";
-import { VideoHeader } from "../../components/SingleVideo/VideoHeader";
+import { useFilterContext } from "../../hooks/CategoryFilter/FilterContext";
+import { useVideo } from "../../hooks/useVideo";
 export function VideoPage() {
+    const { video } = useVideo();
+    const {FilteredVideo}=useFilterContext()
+    const { videoId } = useParams();
+    console.log(videoId)
+    console.log(video)
+    function findVideoDetails(video, videoId) {
+        return video.find((videos) => videos._id === videoId)
+    }
+    const videoDetails = findVideoDetails(FilteredVideo, videoId)
     return <div>
         <ClipoHeader />
-        <Video/>
+        <Video {...videoDetails}/>
     </div>
 }

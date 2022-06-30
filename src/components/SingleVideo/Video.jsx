@@ -8,19 +8,18 @@ import { VideoHeader } from "./VideoHeader"
 
 export function Video(details) {
     return <>
-    <div className="video-body">
-        <Ratio aspectRatio="16x9" className="video-content">
-            <iframe title="image/svg+xml" src={details.videoLink} />
-        </Ratio>
-        <div>
-            <VideoDesctiption details={details}/>
+        <div className="video-body">
+            <Ratio aspectRatio="16x9" className="video-content">
+                <iframe title="image/svg+xml" src={details.videoLink} />
+            </Ratio>
+            <div>
+                <VideoDesctiption details={details} />
+            </div>
+            <div className="must-watch-content">
+                <VideoHeader />
+                <MustWatch details={details} />
+            </div>
         </div>
-        <div className="must-watch-content">
-            <VideoHeader />
-            <MustWatch details={details}/>
-        </div>
-
-    </div>
 
     </>
 }

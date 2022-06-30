@@ -1,15 +1,16 @@
 import Carousel from 'react-bootstrap/Carousel';
 import "./featured.css"
 import Button from 'react-bootstrap/Button';
-import { useVideo } from "../../hooks/useVideo"
+import { useVideo } from "../../hooks/useVideo";
+import {Link} from "react-router-dom";
 export function FeaturedVideo() {
     const { video, setVideo } = useVideo();
     const videoCopy = [...video]
     const slicedVideo = videoCopy.slice(5, 8)
     return (
         <Carousel className="featured-page">
-            {slicedVideo.map(({ thumbnail, title, category }) => {
-                return <Carousel.Item>
+            {slicedVideo.map(({ thumbnail, title, category, _id }) => {
+                return <Carousel.Item key={_id}>
                     <img
                         className="d-block w-100 img-featured"
                         src={thumbnail}
@@ -17,9 +18,11 @@ export function FeaturedVideo() {
                     />
 
                     <Carousel.Caption>
-                        <Button variant="secondary" size="lg" active className="featured-cta">
-                            Watch now
-                        </Button>
+                        <Link to={`/video/${_id}`}>
+                            <Button variant="secondary" size="lg" active className="featured-cta">
+                                Watch now
+                            </Button>
+                        </Link>
                         <h3>{category}</h3>
                         <p className="featured-title">
                             {title}

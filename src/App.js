@@ -19,9 +19,9 @@ function App() {
       <Route path="/history" element={<History/>}/>
       <Route path="/watchlater" element={<WatchLater/>}/>
       {/* unique route later */}
-      <Route path="playlist1" element={<PlayListUnique/>}/>
+      <Route path="/playlist1" element={<PlayListUnique/>}/>
       {/* unique id for video */}
-      <Route path="/video" element={<VideoPage/>}/>
+      <Route path="/video/:videoId" element={<VideoPage/>}/>
       <Route path="/login" element={<Login/>}/>
       <Route path="/signup" element={<Signup/>}/>
       <Route path="/create-playlist" element={<CreatePlaylist/>}/>

@@ -8,10 +8,10 @@ export function MustWatch() {
         <div className='recommended-videos-header'>
             <div className='recommended-videos-must-watch'>
                 {
-                    arr.map((num) => {
-                        return <Card className="card">
+                    arr.map((num,id) => {
+                        return <Card className="card" key={id}>
                             <Card.Img variant="top" src="https://zevnon-react.netlify.app/static/media/main-img.9629d15c5937f344a761.png" />
-                            <i class="fas fa-heart"></i>
+                            <i className="fas fa-heart"></i>
                             <Card.Body>
                                 <Card.Title>Card Title Card</Card.Title>
                                 <div className="card-description">6k views | 2.34 </div>

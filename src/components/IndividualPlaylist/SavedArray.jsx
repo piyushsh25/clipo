@@ -11,8 +11,8 @@ export function SavedArray() {
                     arr.map((num) => {
                         return <Card className="card">
                             <Card.Img variant="top" src="https://zevnon-react.netlify.app/static/media/main-img.9629d15c5937f344a761.png" />
-                            <i class="fas fa-heart"></i>
-                            {/* <i class="fas fa-heart-square"></i> */}
+                            <i className="fas fa-heart"></i>
+                            {/* <i className="fas fa-heart-square"></i> */}
                             <Card.Body>
                                 <Card.Title>Card Title Card</Card.Title>
                                 <div className="card-description">6k views | 2.34 </div>

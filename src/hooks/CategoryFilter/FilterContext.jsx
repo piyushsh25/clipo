@@ -14,9 +14,7 @@ export const FilterProvider = ({ children }) => {
     </FilterContext.Provider>
 }
 function filterVideo(videos, categoryName) {
-    console.log(categoryName)
     if (categoryName) {
-        console.log(categoryName)
         return videos.filter((video) => {
             return video.categoryName === categoryName
         })

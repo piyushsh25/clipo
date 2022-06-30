@@ -4,7 +4,7 @@ export const videos = [
   {
     _id: uuid(),
     thumbnail: "	https://i.ytimg.com/vi/-_X6PhkjpzU/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLAhCOfUy5SACf0qQv9J6J9w2LlaiA",
-    videoLink: "https://www.youtube.com/watch?v=-_X6PhkjpzU",
+    videoLink: "https://www.youtube.com/embed/-_X6PhkjpzU",
     duration: 541,
     title: "5 Front-end Development Skills to Land Your First Job",
     description:
@@ -17,7 +17,7 @@ export const videos = [
   {
     _id: uuid(),
     thumbnail: "https://i.ytimg.com/vi/BBpAmxU_NQo/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLDlq5jN2Yg6kN-Tc8MghwAqW9W_LA",
-    videoLink: "https://www.youtube.com/watch?v=BBpAmxU_NQo",
+    videoLink: "https://www.youtube.com/embed/BBpAmxU_NQo",
     duration: 4722,
     title: "Data Structures and Algorithms for Beginners ",
     description:
@@ -30,7 +30,7 @@ export const videos = [
   {
     _id: uuid(),
     thumbnail: "https://i.ytimg.com/vi/reY50t2hbuM/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLAALNyjCWkBxj8AY2yIOYaSqXQ9lA",
-    videoLink: "https://www.youtube.com/watch?v=reY50t2hbuM",
+    videoLink: "https://www.youtube.com/embed/reY50t2hbuM",
     duration: 378,
     categoryName: "AI / ML",
     title: "Why You Should NOT Learn Machine Learning!",
@@ -43,7 +43,7 @@ export const videos = [
   {
     _id: uuid(),
     thumbnail: "https://i.ytimg.com/vi/qyHyFsT7Hig/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLCHcQe2zORiDFxb0ZbFiXxJwgp2QQ",
-    videoLink: "https://www.youtube.com/watch?v=qyHyFsT7Hig",
+    videoLink: "https://www.youtube.com/embed/qyHyFsT7Hig",
     duration: 178,
     title: "Frontend Development explained in 2 minutes // Tech in 2 ",
     description:
@@ -55,7 +55,7 @@ export const videos = [
   }, {
     _id: uuid(),
     thumbnail: "	https://i.ytimg.com/vi/XXaZLdBaDqY/hqdefault.jpg?s…AFwAcABBg==&rs=AOn4CLDwGihRycNcJClUdsETFe7cdtDe3A",
-    videoLink: "https://www.youtube.com/watch?v=XXaZLdBaDqY",
+    videoLink: "https://www.youtube.com/embed/XXaZLdBaDqY",
     duration: 2396,
     title: "Projects to make for Frontend Development | Frontend Developer Roadmap ft @Akshay Saini ",
     description:
@@ -67,7 +67,7 @@ export const videos = [
   }, {
     _id: uuid(),
     thumbnail: "https://i.ytimg.com/vi/cbSrsYiRamo/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLDiEx8yl3tsSrH_l9wXGbOBiHU0yQ",
-    videoLink: "https://www.youtube.com/watch?v=cbSrsYiRamo",
+    videoLink: "https://www.youtube.com/embed/cbSrsYiRamo",
     duration: 188,
     title: "Backend Development explained in 2 minutes // Tech in 2",
     description:
@@ -80,7 +80,7 @@ export const videos = [
   {
     _id: uuid(),
     thumbnail: "	https://i.ytimg.com/vi/76dhtgZt38A/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLAleEeRuFBy4cgJNHFUFfnku1fTpQ",
-    videoLink: "https://www.youtube.com/watch?v=76dhtgZt38A",
+    videoLink: "https://www.youtube.com/embed/76dhtgZt38A",
     duration: 3057,
     categoryName: "DSA",
     title: "6. Binary Trees, Part 1    ",
@@ -93,7 +93,7 @@ export const videos = [
   {
     _id: uuid(),
     thumbnail: "https://i.ytimg.com/vi/EZknw_OXk5M/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLBr7Ame5lEjfzuw576T5FIlaE26mA",
-    videoLink: "https://www.youtube.com/watch?v=EZknw_OXk5M",
+    videoLink: "https://www.youtube.com/embed/EZknw_OXk5M",
     duration: 286,
     title: "Junior Backend Developer Portfolio Projects",
     description:
@@ -105,7 +105,7 @@ export const videos = [
   },  {
     _id: uuid(),
     thumbnail: "https://i.ytimg.com/vi/QWGbXU7pi4w/hqdefault.jpg?s…AFwAcABBg==&rs=AOn4CLDdycpAB1fI1ONdPABzKiFZwjXV1w",
-    videoLink: "https://www.youtube.com/watch?v=QWGbXU7pi4w",
+    videoLink: "https://www.youtube.com/embed/QWGbXU7pi4w",
     duration: 584,
     categoryName: "DSA",
     title: "Don't Use DSA Questions Sheets for Interview Preparation!",
@@ -118,7 +118,7 @@ export const videos = [
   {
     _id: uuid(),
     thumbnail: "	https://i.ytimg.com/vi/0Kv_k4ypj6o/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLDHJ0eQkgk7ObYliUnLzb0xh_0fRw",
-    videoLink: "https://www.youtube.com/watch?v=0Kv_k4ypj6o",
+    videoLink: "https://www.youtube.com/embed/0Kv_k4ypj6o",
     duration: 625,
     title: "What You Need to Know to be a Backend Developer ",
     description:
@@ -131,7 +131,7 @@ export const videos = [
   {
     _id: uuid(),
     thumbnail: "https://i.ytimg.com/vi/iN7cAHpBA9s/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLC9o4h0ZZkIBlvpErgoTyjJVJfU_Q",
-    videoLink: "https://www.youtube.com/watch?v=iN7cAHpBA9s",
+    videoLink: "https://www.youtube.com/embed/iN7cAHpBA9s",
     duration: 881,
     categoryName: "AI / ML",
     title: "My Journey Learning ML and AI through Self Study - Sachi Parikh - ML4ALL 2019",
@@ -144,7 +144,7 @@ export const videos = [
   {
     _id: uuid(),
     thumbnail: "https://i.ytimg.com/vi/aZkG0b6oi4s/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLD7bX3YKKFafF60oZ9FAH6dFUlWSg",
-    videoLink: "https://www.youtube.com/watch?v=aZkG0b6oi4s",
+    videoLink: "https://www.youtube.com/embed/aZkG0b6oi4s",
     duration: 671,
     title: "Backend Developer Roadmap 2021 | How to Become a Backend Developer ",
     description:
@@ -157,7 +157,7 @@ export const videos = [
   {
     _id: uuid(),
     thumbnail: "https://i.ytimg.com/vi/udt-kvHNt_o/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLAtrSU9SNhdfXScQ_Bt2tubXAyjvw",
-    videoLink: "https://www.youtube.com/watch?v=udt-kvHNt_o",
+    videoLink: "https://www.youtube.com/embed/udt-kvHNt_o",
     duration: 1715,
     categoryName: "DSA",
     title: "How to Learn Data Structures & Algorithms in 90 Days? | Complete DSA Roadmap",
@@ -171,7 +171,7 @@ export const videos = [
   {
     _id: uuid(),
     thumbnail: "	https://i.ytimg.com/vi/76dhtgZt38A/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLAleEeRuFBy4cgJNHFUFfnku1fTpQ",
-    videoLink: "https://www.youtube.com/watch?v=WSbgixdC9g8",
+    videoLink: "https://www.youtube.com/embed/WSbgixdC9g8",
     duration: 889,
     categoryName: "AI / ML",
     title: "AI vs Machine Learning vs Deep Learning | Machine Learning Training with Python | Edureka",
@@ -184,7 +184,7 @@ export const videos = [
   {
     _id: uuid(),
     thumbnail: "https://i.ytimg.com/vi/lYWt-aCnE2U/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLDh_c3WRE3b4_Grk8gNzD_QItcxtA",
-    videoLink: "https://www.youtube.com/watch?v=iN7cAHpBA9s",
+    videoLink: "https://www.youtube.com/embed/iN7cAHpBA9s",
     duration: 5261,
     categoryName: "AI / ML",
     title: "Introduction to ML and AI - MFML Part 1 ",
@@ -197,7 +197,7 @@ export const videos = [
   {
     _id: uuid(),
     thumbnail: "https://i.ytimg.com/vi/CHhwJjR0mZA/hqdefault.jpg?s…AFwAcABBg==&rs=AOn4CLA7-e0u-ajdpC5zyNhqB3r8Ct81sw",
-    videoLink: "https://www.youtube.com/watch?v=CHhwJjR0mZA",
+    videoLink: "https://www.youtube.com/embed/CHhwJjR0mZA",
     duration: 3017,
     categoryName: "DSA",
     title: "2. Data Structures and Dynamic Arrays ",
@@ -226,7 +226,7 @@ export const videos = [
   {
     _id: uuid(),
     thumbnail: "	https://i.ytimg.com/vi/9QErWiClGjM/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLDXN_1IK_9AEEE8GU2duj14C0ydEw",
-    videoLink: "https://www.youtube.com/watch?v=9QErWiClGjM",
+    videoLink: "https://www.youtube.com/embed/9QErWiClGjM",
     duration: 631,
     categoryName: "AI / ML",
     title: "What’s The Difference Between Artificial Intelligence And Machine Learning",
@@ -239,7 +239,7 @@ export const videos = [
   {
     _id: uuid(),
     thumbnail: "	https://i.ytimg.com/vi/l7XxVX2cXfg/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLCvwtSOgfUzFPDoyGFvJ0-aVW7HRw",
-    videoLink: "https://www.youtube.com/watch?v=l7XxVX2cXfg",
+    videoLink: "https://www.youtube.com/embed/l7XxVX2cXfg",
     duration: 434,
     title: "How To Become a Junior Front End Developer in 2022 | No Experience ",
     description:

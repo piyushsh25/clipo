@@ -24,6 +24,9 @@ export function RecommendedVideos() {
                             <Button variant="secondary" size="lg">
                                 <Link className='watch-now-link' to={`/video/${_id}`}>Watch now</Link>
                             </Button>
+                            <Button variant="info" size="lg">
+                            <Link className='save-to-playlist' to={`/video/${_id}`}>save to playlist</Link> 
+                            </Button>
                         </Card>
                     })
                 }

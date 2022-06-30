@@ -9,7 +9,7 @@ export function Toast() {
             All
         </div>
         {category.map(({ categoryName, description, id }) => {
-            return <div>
+            return <div key={id}>
                 <input type="radio" id={`radio${id}`} name="radios" value="all" onChange={() => dispatch({ type: categoryName })} checked={state.categoryName===categoryName}/>
                 <label htmlFor={`radio${id}`}>{categoryName}</label>
             </div>

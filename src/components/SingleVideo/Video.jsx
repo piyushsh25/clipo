@@ -16,7 +16,7 @@ export function Video(details) {
         </div>
         <div className="must-watch-content">
             <VideoHeader />
-            <MustWatch />
+            <MustWatch details={details}/>
         </div>
 
     </div>

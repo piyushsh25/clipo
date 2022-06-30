@@ -1,6 +1,7 @@
 import { Navbar, Button, FormControl,Container,Offcanvas,Nav,NavDropdown,Form } from "react-bootstrap"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./header.css"
+import {Link} from "react-router-dom"
 export function ClipoHeader() {
     return <div className="header-all">
     {['xxl'].map((expand) => (
@@ -15,7 +16,7 @@ export function ClipoHeader() {
           >
             <Offcanvas.Header closeButton>
               <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                Cliop
+                <Link to="/">My Clipo</Link>
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>

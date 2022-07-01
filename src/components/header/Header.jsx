@@ -1,9 +1,9 @@
-import { Navbar, Button, FormControl,Container,Offcanvas,Nav,NavDropdown,Form } from "react-bootstrap"
+import { Navbar, Button, FormControl, Container, Offcanvas, Nav, NavDropdown, Form } from "react-bootstrap"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./header.css"
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 export function ClipoHeader() {
-    return <div className="header-all">
+  return <div className="header-all">
     {['xxl'].map((expand) => (
       <Navbar key={expand} bg="light" expand={expand} className="mb-3 navbar-all" fixed="top">
         <Container fluid>
@@ -22,7 +22,9 @@ export function ClipoHeader() {
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-3">
                 <Nav.Link href="/">Home</Nav.Link>
-                <Nav.Link href="/playlist">Playlist</Nav.Link>
+                <Link to="/playlist">
+                  Playlist
+                </Link>
                 <NavDropdown
                   title="More"
                   id={`offcanvasNavbarDropdown-expand-${expand}`}
@@ -36,7 +38,7 @@ export function ClipoHeader() {
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
                   <NavDropdown.Item href="#action6">
-                   Signout/Logout
+                    Signout/Logout
                   </NavDropdown.Item>
                 </NavDropdown>
               </Nav>

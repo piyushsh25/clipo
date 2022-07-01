@@ -13,7 +13,6 @@ export function MustWatch(details) {
     const mustWatchCategoryFiltered = mustWatchDisplayFiltered.filter((video) => {
         return video.categoryName === details.details.categoryName
     })
-    console.log(mustWatchCategoryFiltered)
     return (
         <div className='recommended-videos-header'>
             <div className='recommended-videos-must-watch'>

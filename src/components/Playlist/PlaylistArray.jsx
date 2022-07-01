@@ -1,11 +1,12 @@
+import { usePlayList } from "../../hooks/Playlist/PlaylistContext"
 import "./CardArray.css"
 import { NewPlaylist } from "./NewPlaylist"
 export function CardArray() {
-    const arr = [1, 2, 3, 4, 5, 6]
+   const {playlistArr,setPlaylistArr}=usePlayList();
     return <div>
         <NewPlaylist />
         <div className="playlist-container">
-            {arr.map((num) => {
+            {playlistArr.map((num) => {
                 return <div className="playlist-card">
                     <div className="playlist-name">
                         <div>  My playlist {num} </div>

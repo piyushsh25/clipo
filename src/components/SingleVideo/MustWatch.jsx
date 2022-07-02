@@ -19,10 +19,10 @@ export function MustWatch(details) {
                 {
                     mustWatchCategoryFiltered.map((video, id) => {
                         return <Card className="card" key={id}>
-                            <Card.Img variant="top" src={video.thumbnail} />
+                            <Card.Img className="must-watch-src-image" variant="top" src={video.thumbnail} />
                             <i className="fas fa-heart"></i>
                             <Card.Body>
-                                <Card.Title>{(video.title).slice(0, 25)}</Card.Title>
+                                <Card.Title>{(video.title).slice(0, 25)}...</Card.Title>
                                 <div className="card-description">6k views | {(video.duration / 60).toFixed(2)}min.. </div>
                                 <Link to={`/video/${video._id}`}> <Button variant="primary"> watch now</Button></Link>
                             </Card.Body>

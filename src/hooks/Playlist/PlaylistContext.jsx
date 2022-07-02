@@ -4,7 +4,7 @@ import { v4 as uuid } from "uuid";
 const PlaylistContext = createContext();
 export const PlaylistProvider = ({ children }) => {
     const [playlistArr, setPlaylistArr] = useState([]);
-    const [playlistName, setPlaylistName] = useState(["default"])
+    const [playlistName, setPlaylistName] = useState(["default","piyushhh"])
     function addToPlayList(video,categoryname) {
         const addVideo = [...playlistArr, { playlistname: categoryname, video }]
         setPlaylistArr(addVideo)

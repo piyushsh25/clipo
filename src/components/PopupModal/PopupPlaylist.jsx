@@ -25,7 +25,7 @@ export function PopupModal({ showPlayListModal, setShowPlaylistModal ,videoToSav
           <h1>Choose your playlist to add.</h1>
         </div>
         <div className="body">
-          <div>
+          <div className="playlist-names">
             {playlistName.map((playlist, id) => {
               return <Button key={id} onClick={()=>addButtonTrigger(videoToSave,playlist)}>{playlist}</Button>
             })}
@@ -40,7 +40,7 @@ export function PopupModal({ showPlayListModal, setShowPlaylistModal ,videoToSav
           >
             Cancel
           </button>
-          <button>Continue</button>
+          <button>Create Playlist</button>
         </div>
       </div>
     </div>

@@ -1,7 +1,15 @@
 .newplaylist{
     display: flex;
-    justify-content: flex-start;
-    margin-left: 2rem;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+.button-link{
+    color: inherit;
+    background-color: inherit;
+    border: 0;
+}
+.newplaylist div{
+    margin: auto;
 }
 .newplaylist-header{
     font-size: 2rem;   

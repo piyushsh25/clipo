@@ -11,6 +11,15 @@
   flex-wrap: wrap;
   position: relative;
 }
+.save-to-playlist{
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  border-radius: 0;
+}
+.save-to-playlist:hover{
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
 .h3 {
   margin: 0% 5%;
   font-size: 2rem;
@@ -32,6 +41,10 @@
 .watch-now-link{
   text-decoration: none;
   color: #ffffff;
+  border-radius: 0;
+}
+.btn.btn-secondary.btn-lg,.btn.btn-info.btn-lg{
+  border-radius: 0;
 }
 @media screen and (max-width: 760px) {
   .recommended-videos {

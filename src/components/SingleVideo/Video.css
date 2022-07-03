@@ -11,16 +11,19 @@
   flex-wrap: wrap;
   margin-bottom: 2rem;
 }
-.newplaylist {
+/* .newplaylist {
   top: 0;
   right: 0;
   margin: 0;
   margin-left: auto;
   margin-right: 2rem;
-}
+} */
 .must-watch-content {
   margin-left: auto;
   margin-right: 6rem;
+}
+.must-watch-src-image{
+  height: 8rem;
 }
 @media screen and (max-width: 760px) {
   .video-body {
@@ -28,6 +31,7 @@
   }
   .must-watch-content {
     margin: 0;
+    margin-top: 8rem;
   }
   .video-content {
     margin: auto;
@@ -35,4 +39,5 @@
     position: relative;
     margin-bottom: 2rem;
   }
+
 }

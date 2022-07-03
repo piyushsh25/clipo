@@ -19,7 +19,7 @@ function App() {
       <Route path="/history" element={<History/>}/>
       <Route path="/watchlater" element={<WatchLater/>}/>
       {/* unique route later */}
-      <Route path="/playlist1" element={<PlayListUnique/>}/>
+      <Route path="/playlist/:categoty" element={<PlayListUnique/>}/>
       {/* unique id for video */}
       <Route path="/video/:videoId" element={<VideoPage/>}/>
       <Route path="/login" element={<Login/>}/>

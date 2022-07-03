@@ -4,15 +4,18 @@ import "./index.css";
 import App from "./App";
 import { makeServer } from "./server";
 import { FilterProvider } from "./hooks/CategoryFilter/FilterContext";
+import { PlaylistProvider } from "./hooks/Playlist/PlaylistContext";
 
 // Call make Server
 makeServer();
 
 ReactDOM.render(
   <React.StrictMode>
-    <FilterProvider>
-      <App />
-    </FilterProvider>
+    <PlaylistProvider>
+      <FilterProvider>
+        <App />
+      </FilterProvider>
+    </PlaylistProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

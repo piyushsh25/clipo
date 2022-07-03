@@ -1,27 +1,27 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import { useLocation,Link } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import { usePlayList } from '../../hooks/Playlist/PlaylistContext';
 import "../Recommended/Recommended.css";
 export function SavedArray() {
-    const arr = [1, 2, 3, 4, 232, 4, 24, 2, 23, 32, 4323, 3234]
-    const location=useLocation();
-    const pathNameLength=location.pathname.length
+    const location = useLocation();
+    const pathNameLength = location.pathname.length
     //slice the entire pathname to get the name of playlist from link
-    const slicedLink=location.pathname.slice(10,pathNameLength)
-    const {playlistArr, setPlaylistArr, addToPlayList, playlistName, setPlaylistName}=usePlayList();
-    function getCategoryVideos(playlistArr,slicedLink){
-        return playlistArr.filter((videos)=>{
-            return videos.playlistname===slicedLink
+    const slicedLink = location.pathname.slice(10, pathNameLength)
+    const { playlistArr } = usePlayList();
+    function getCategoryVideos(playlistArr, slicedLink) {
+        return playlistArr.filter((videos) => {
+            return videos.playlistname === slicedLink
         })
     }
-    const categoryVideos=getCategoryVideos(playlistArr,slicedLink)
+    const categoryVideos = getCategoryVideos(playlistArr, slicedLink)
+
     return (
         <div className='recommended-videos-header'>
-            
+
             <div className='recommended-videos'>
                 {
-                    categoryVideos.map(({video}) => {
+                    categoryVideos.map(({ video }) => {
                         return <Card className="card" key={video._id}>
                             <Card.Img variant="top" className='card-img-top' src={video.thumbnail} />
                             <Card.Body>

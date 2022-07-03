@@ -21,16 +21,13 @@ export function ClipoHeader() {
             </Offcanvas.Header>
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-3">
-                <Nav.Link>
-                  <Link to="/" className="header-links home">
-                    Home
-                  </Link>
-                </Nav.Link>
-                <Nav.Link>
-                  <Link to="/playlist" className="header-links playlost">
-                    Playlist
-                  </Link>
-                </Nav.Link>
+
+                <Link to="/" className="header-links home">
+                  Home
+                </Link>
+                <Link to="/playlist" className="header-links playlost">
+                  Playlist
+                </Link>
 
                 <NavDropdown
                   title="More"

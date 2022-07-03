@@ -20,6 +20,7 @@
 }
 .playlist-trash{
   font-size: 2.5rem;
+  cursor: pointer;
 }
 .playlist-name{
   font-size: 1.2rem;

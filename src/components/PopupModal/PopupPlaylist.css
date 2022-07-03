@@ -11,7 +11,7 @@
   } 
    
   .modalContainer {
-    width: 42rem;
+    width: auto;
     height: 30rem;
     border-radius: 12px;
     background-color: white;

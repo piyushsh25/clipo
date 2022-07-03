@@ -1,8 +1,8 @@
 import { ClipoHeader } from "../../components/header/Header";
-import { SavedArray } from "../../components/IndividualPlaylist/SavedArray";
+import { SavedIndividualArray } from "../../components/IndividualPlaylist/IndividualArray";
 export function PlayListUnique() {
     return <div>
         <ClipoHeader />
-       <SavedArray/>
+        <SavedIndividualArray/>
     </div>
 }

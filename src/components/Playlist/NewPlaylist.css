@@ -3,6 +3,11 @@
     justify-content: center;
     flex-wrap: nowrap;
 }
+.button-link{
+    color: inherit;
+    background-color: inherit;
+    border: 0;
+}
 .newplaylist div{
     margin: auto;
 }

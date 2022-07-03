@@ -9,6 +9,7 @@ import { Signup } from "./pages/Signup/Signup";
 import { VideoPage } from "./pages/VideoPage/VideoPage";
 import { WatchLater } from "./pages/WatchLater/WatchLater";
 import { CreatePlaylist } from "./pages/CreatePlayList/CreatePlaylist";
+import { Error } from "./pages/ErrorPage/Error";
 function App() {
   return (
     <div className="App">
@@ -25,6 +26,7 @@ function App() {
       <Route path="/login" element={<Login/>}/>
       <Route path="/signup" element={<Signup/>}/>
       <Route path="/create-playlist" element={<CreatePlaylist/>}/>
+      <Route path="*" element={<Error/>} />
     </Routes>
   </BrowserRouter>
     </div>

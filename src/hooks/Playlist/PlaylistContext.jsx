@@ -17,7 +17,7 @@ export const PlaylistProvider = ({ children }) => {
                 }
             }
         })
-        
+
         if (!isVideoPresent) {
             // on video not present make a new object
             const addVideo = [...playlistArr, { pid: uuid(), playlistname: categoryname, video }]
@@ -26,7 +26,7 @@ export const PlaylistProvider = ({ children }) => {
         }
 
     }
-    function deletePlaylist(playlistToBeDeleted, playlistArr, playlistName,navigate) {
+    function deletePlaylist(playlistToBeDeleted, playlistArr, playlistName, navigate) {
         //new filtered array after deleting the clicked playlist
         const newPlaylistNames = playlistName.filter((name) => {
             return name !== playlistToBeDeleted
@@ -42,7 +42,7 @@ export const PlaylistProvider = ({ children }) => {
         //after deletion navigate to the playlist page
         navigate("/playlist")
     }
-    return <PlaylistContext.Provider value={{ playlistArr, setPlaylistArr, addToPlayList, playlistName, setPlaylistName ,deletePlaylist}}>
+    return <PlaylistContext.Provider value={{ playlistArr, setPlaylistArr, addToPlayList, playlistName, setPlaylistName, deletePlaylist }}>
         {children}
     </PlaylistContext.Provider>
 }

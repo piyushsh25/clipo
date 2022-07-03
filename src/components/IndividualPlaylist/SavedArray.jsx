@@ -3,6 +3,7 @@ import Card from 'react-bootstrap/Card';
 import { useLocation, Link } from 'react-router-dom';
 import { usePlayList } from '../../hooks/Playlist/PlaylistContext';
 import "../Recommended/Recommended.css";
+import { SavedHeader } from "../../components/IndividualPlaylist/SavedHeader";
 export function SavedArray() {
     const location = useLocation();
     const pathNameLength = location.pathname.length
@@ -17,6 +18,8 @@ export function SavedArray() {
     const categoryVideos = getCategoryVideos(playlistArr, slicedLink)
 
     return (
+        <div>
+       <SavedHeader slicedLink={slicedLink}/>
         <div className='recommended-videos-header'>
 
             <div className='recommended-videos'>
@@ -36,6 +39,7 @@ export function SavedArray() {
                 }
 
             </div>
+        </div>
         </div>
     );
 }

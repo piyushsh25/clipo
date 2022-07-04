@@ -4,6 +4,7 @@ import { useHistory } from '../../hooks/History/HistoryContext';
 import { NotAvailable } from '../NotAvailable/NotAvailable';
 import "../Recommended/Recommended.css";
 import { Link } from "react-router-dom"
+import { IconWatchLater } from '../WatchLater/IconWatchLater';
 export function HistoryArray() {
     const { historyArray, addToHistory, removeHistoryVideo } = useHistory()
     return (
@@ -13,7 +14,7 @@ export function HistoryArray() {
                     historyArray.map((video) => {
                         return <Card className="card" key={video._id}>
                             <Card.Img variant="top" src={video.thumbnail} />
-                            <i className="fas fa-heart"></i>
+                           <IconWatchLater video={video}/>
                             {/* <i className="fas fa-heart-square"></i> */}
                             <Card.Body>
                                 <Card.Title>{(video.title).slice(0, 20)}...</Card.Title>

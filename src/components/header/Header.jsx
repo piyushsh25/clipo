@@ -35,13 +35,22 @@ export function ClipoHeader() {
                   title="More"
                   id={`offcanvasNavbarDropdown-expand-${expand}`}
                 >
-                  <NavDropdown.Item href="#action3">Account Infromation</NavDropdown.Item>
-                  <NavDropdown.Item href="#action4">
-                    Liked Videos
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="/watchlater">
-                    WatchLater
-                  </NavDropdown.Item>
+
+                  <div className="nav-item dropdown-item">
+                    <Link to="/history" className="header-links home header-links home nav-link">
+                      Account information
+                    </Link>
+                  </div>
+                  <div className="nav-item dropdown-item">
+                    <Link to="/history" className="header-links home header-links home nav-link">
+                     liked video
+                    </Link>
+                  </div>
+                  <div className="nav-item dropdown-item">
+                    <Link to="/watchlater" className="header-links home header-links home nav-link">
+                      watch later
+                    </Link>
+                  </div>
                   <NavDropdown.Divider />
                   <NavDropdown.Item href="#action6">
                     Signout/Logout

@@ -4,6 +4,7 @@ const PlaylistContext = createContext();
 export const PlaylistProvider = ({ children }) => {
     const [playlistArr, setPlaylistArr] = useState([]);
     const [playlistName, setPlaylistName] = useState([])
+    const [showPlayListModal, setShowPlaylistModal] = useState(false)
     function addToPlayList(video, categoryname) {
         //to check if the video is already in the selected playlist
         let isVideoPresent = false;
@@ -42,7 +43,7 @@ export const PlaylistProvider = ({ children }) => {
         //after deletion navigate to the playlist page
         navigate("/playlist")
     }
-    return <PlaylistContext.Provider value={{ playlistArr, setPlaylistArr, addToPlayList, playlistName, setPlaylistName, deletePlaylist }}>
+    return <PlaylistContext.Provider value={{ playlistArr, setPlaylistArr, addToPlayList, playlistName, setPlaylistName, deletePlaylist, showPlayListModal, setShowPlaylistModal }}>
         {children}
     </PlaylistContext.Provider>
 }

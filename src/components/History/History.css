@@ -9,16 +9,29 @@
 }
 .fas.fa-heart{
     position: absolute;
-    font-size: 1.5rem;
-    margin-top: 8px;
+    font-size: 2rem;
+    margin-top: 0px;
     margin-left: 15rem;
-    color: gray;
-    background-color: white;
+    color: black;
     padding: 4px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+}
+.fas.fa-heart.fill{
+    position: absolute;
+    font-size: 2rem;
+    margin-top: 0px;
+    margin-left: 15rem;
+    color: rgb(255, 0, 0);
+    padding: 4px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 .featured-cta.history{
     width: 100%;

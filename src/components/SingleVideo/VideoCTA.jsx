@@ -2,6 +2,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 // import 'bootstrap-css-only/css/bootstrap.min.css';
 // import 'mdbreact/dist/css/mdb.css';
 import { MDBIcon } from "mdbreact"
+import { IconWatchLater } from '../WatchLater/IconWatchLater';
 import "./Video-CTA.css"
 export function VideoCTA() {
     var a = false;
@@ -28,7 +29,7 @@ export function VideoCTA() {
             </div> */}
             {a === false ? <MDBIcon far icon="heart" />
                 : <MDBIcon icon="heart" />}
-
+                
         </div>
         <div>
             {/* <div>

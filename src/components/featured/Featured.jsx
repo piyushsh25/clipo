@@ -2,10 +2,12 @@ import Carousel from 'react-bootstrap/Carousel';
 import "./featured.css"
 import Button from 'react-bootstrap/Button';
 import { useVideo } from "../../hooks/useVideo";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useHistory } from '../../hooks/History/HistoryContext';
 export function FeaturedVideo() {
     const { video, setVideo } = useVideo();
     const videoCopy = [...video]
+    const { addToHistory } = useHistory()
     const slicedVideo = videoCopy.slice(5, 8)
     return (
         <Carousel className="featured-page">
@@ -18,7 +20,7 @@ export function FeaturedVideo() {
                     />
 
                     <Carousel.Caption>
-                        <Link to={`/video/${_id}`}>
+                        <Link to={`/video/${_id}`} onClick={() => addToHistory(video)}>
                             <Button variant="secondary" size="lg" active className="featured-cta">
                                 Watch now
                             </Button>

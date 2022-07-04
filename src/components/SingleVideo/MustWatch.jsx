@@ -3,9 +3,11 @@ import Card from 'react-bootstrap/Card';
 import { useFilterContext } from '../../hooks/CategoryFilter/FilterContext';
 import "./MustWatch.css"
 import { Link } from "react-router-dom"
+import {useHistory} from "../../hooks/History/HistoryContext"
 export function MustWatch(details) {
     const { FilteredVideo } = useFilterContext()
     const filterVideoCopy = [...FilteredVideo]
+    const {addToHistory}=useHistory()
     // removes video in must watch section that is currently being played
     const mustWatchDisplayFiltered = filterVideoCopy.filter((video) => {
         return video.videoLink !== details.details.videoLink
@@ -24,7 +26,7 @@ export function MustWatch(details) {
                             <Card.Body>
                                 <Card.Title>{(video.title).slice(0, 25)}...</Card.Title>
                                 <div className="card-description">6k views | {(video.duration / 60).toFixed(2)}min.. </div>
-                                <Link to={`/video/${video._id}`}> <Button variant="primary"> watch now</Button></Link>
+                                <Link to={`/video/${video._id}`} onClick={()=>addToHistory(video)}> <Button variant="primary"> watch now</Button></Link>
                             </Card.Body>
 
                         </Card>

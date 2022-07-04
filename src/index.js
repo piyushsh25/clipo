@@ -5,6 +5,7 @@ import App from "./App";
 import { makeServer } from "./server";
 import { FilterProvider } from "./hooks/CategoryFilter/FilterContext";
 import { PlaylistProvider } from "./hooks/Playlist/PlaylistContext";
+import { HistoryProvider } from "./hooks/History/HistoryContext";
 
 // Call make Server
 makeServer();
@@ -12,9 +13,11 @@ makeServer();
 ReactDOM.render(
   <React.StrictMode>
     <PlaylistProvider>
-      <FilterProvider>
-        <App />
-      </FilterProvider>
+      <HistoryProvider>
+        <FilterProvider>
+          <App />
+        </FilterProvider>
+      </HistoryProvider>
     </PlaylistProvider>
   </React.StrictMode>,
   document.getElementById("root")

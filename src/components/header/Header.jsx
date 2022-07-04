@@ -22,8 +22,8 @@ export function ClipoHeader() {
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-3">
                 <div className="nav-item">
-                  <Link to="/" className="header-links home header-links home nav-link">
-                    Home
+                  <Link to="/history" className="header-links home header-links home nav-link">
+                    History
                   </Link>
                 </div>
                 <div className="nav-item">

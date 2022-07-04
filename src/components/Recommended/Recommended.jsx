@@ -7,11 +7,11 @@ import { useEffect, useState } from 'react';
 import "./Recommended.css";
 import { PopupModal } from '../PopupModal/PopupPlaylist';
 import { usePlayList } from '../../hooks/Playlist/PlaylistContext';
+import { useHistory } from '../../hooks/History/HistoryContext';
 export function RecommendedVideos() {
-    const { addToPlayList } = usePlayList();
     const { FilteredVideo } = useFilterContext();
     const [showPlayListModal, setShowPlaylistModal] = useState(false)
-    const [videoToSave,setVideoToSave]=useState(null);
+    const [videoToSave, setVideoToSave] = useState(null);
     useEffect(() => {
         if (showPlayListModal) {
             document.body.style.overflow = "hidden"
@@ -24,6 +24,7 @@ export function RecommendedVideos() {
         setVideoToSave(video)
         setShowPlaylistModal(true)
     }
+    const { addToHistory } = useHistory()
     return (
         <div className='recommended-videos-header'>
             <div className='h3'>Must watch videos</div>
@@ -38,9 +39,9 @@ export function RecommendedVideos() {
                                 <div className="card-description">6k views | {(video.duration / 60).toFixed(2)} min </div>
                             </Card.Body>
                             <Button variant="secondary" size="lg">
-                                <Link className='watch-now-link' to={`/video/${video._id}`}>Watch now</Link>
+                                <Link className='watch-now-link' onClick={() => addToHistory(video)} to={`/video/${video._id}`}>Watch now</Link>
                             </Button>
-                            <Button variant="info" size="lg" onClick={() =>saveToPlaylist(video)}>
+                            <Button variant="info" size="lg" onClick={() => saveToPlaylist(video)}>
                                 save to playlist
                             </Button>
                         </Card>

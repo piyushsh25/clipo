@@ -11,7 +11,7 @@ import { useHistory } from '../../hooks/History/HistoryContext';
 import { IconWatchLater } from '../WatchLater/IconWatchLater';
 export function RecommendedVideos() {
     const { FilteredVideo } = useFilterContext();
-    const [showPlayListModal, setShowPlaylistModal] = useState(false)
+    const {showPlayListModal,setShowPlaylistModal}=usePlayList();
     const [videoToSave, setVideoToSave] = useState(null);
     useEffect(() => {
         if (showPlayListModal) {

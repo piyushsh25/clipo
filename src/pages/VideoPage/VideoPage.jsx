@@ -12,6 +12,6 @@ export function VideoPage() {
     const videoDetails = findVideoDetails(FilteredVideo, videoId)
     return <div>
         <ClipoHeader />
-        <Video {...videoDetails}/>
+        <Video videoDetails={videoDetails} video={FilteredVideo}/>
     </div>
 }

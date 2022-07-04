@@ -54,7 +54,7 @@ export function SavedIndividualArray() {
                     </div>
                 </div>
             </div>
-                : "Playlist Does'nt Exist"}
+                : "Playlist Doesn't Exist"}
         </div>
     );
 }

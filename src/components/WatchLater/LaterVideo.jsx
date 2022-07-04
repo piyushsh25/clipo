@@ -7,7 +7,6 @@ import { NotAvailable } from "../NotAvailable/NotAvailable"
 import { Link } from "react-router-dom"
 export function WatchLaterArray() {
     const { watchLaterArray, setWatchLaterArray } = useWatchLater()
-    console.log(watchLaterArray)
     return (
         <div className='recommended-videos-header'>
             <div className='recommended-videos'>

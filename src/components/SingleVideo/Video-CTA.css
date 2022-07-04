@@ -1,25 +1,45 @@
-.video-cta-icons-container{
-    display: flex;
-
+.video-cta-icons-container {
+  /* display: flex; */
 }
-.video-cta-icons{
-    display: flex;
-    justify-content: space-between;
-    width: 50%;
+.video-cta-icons {
+  display: flex;
+  /* justify-content:space-around; */
+  width: 100%;
+  margin: 1rem 0;
+  padding: 0;
+}
+/* the parent div of icons */
+.video-cta-icons div {
+  display: flex;
+  justify-content:space-evenly;
+  align-items: center;
+  font-size: 2rem;
+  margin:auto;
+  padding: 0;
+}
+/* name of the icons */
+.video-cta-icons div div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+.watch-later-icon-cta .fas.fa-heart{
     margin: 0;
     padding: 0;
 }
-/* the parent div of icons */
-.video-cta-icons div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.4rem;
+.in-playlist-cta.fill {
+  color: #ff0000;
+  cursor: pointer;
 }
-/* name of the icons */
-.video-cta-icons div div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 10px;
+.in-playlist-cta.empty {
+  color: rgb(12, 12, 12);
+  cursor: pointer;
+}
+.add-to-playlist-cta{
+    margin-right: 5rem;
+    cursor: pointer;
+}
+div.card-description{
+    font-size: 1.5rem;
 }

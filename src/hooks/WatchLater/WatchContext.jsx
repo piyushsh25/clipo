@@ -14,7 +14,6 @@ export const WatchProvider = ({ children }) => {
         setWatchLaterArray([])
     }
     function addToLater(video) {
-console.log(video._id)
         setWatchLaterArray([...watchLaterArray, video])
     }
     return <WatchContext.Provider value={{ watchLaterArray, setWatchLaterArray, removeFromLater, addToLater, removeAllWatchLater }}>

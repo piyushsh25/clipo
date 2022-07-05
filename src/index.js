@@ -8,6 +8,7 @@ import { PlaylistProvider } from "./hooks/Playlist/PlaylistContext";
 import { HistoryProvider } from "./hooks/History/HistoryContext";
 import { WatchProvider } from "./hooks/WatchLater/WatchContext";
 import { LikedProvider } from "./hooks/LikedVideo/LikedContext";
+import { AuthProvider } from "./hooks/Auth/AuthContext";
 
 // Call make Server
 makeServer();
@@ -15,15 +16,17 @@ makeServer();
 ReactDOM.render(
   <React.StrictMode>
     <PlaylistProvider>
-      <WatchProvider>
-        <LikedProvider>
-          <HistoryProvider>
-            <FilterProvider>
-              <App />
-            </FilterProvider>
-          </HistoryProvider>
-        </LikedProvider>
-      </WatchProvider>
+      <AuthProvider>
+        <WatchProvider>
+          <LikedProvider>
+            <HistoryProvider>
+              <FilterProvider>
+                <App />
+              </FilterProvider>
+            </HistoryProvider>
+          </LikedProvider>
+        </WatchProvider>
+      </AuthProvider>
     </PlaylistProvider>
   </React.StrictMode>,
   document.getElementById("root")

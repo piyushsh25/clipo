@@ -18,6 +18,9 @@ font-size: 2.5rem;
     text-decoration: none;
     color: inherit;
 }
+.nav-link{
+    cursor: pointer;
+}
 /* .nav-item.dropdown{
     margin-left: 8px;
 } */

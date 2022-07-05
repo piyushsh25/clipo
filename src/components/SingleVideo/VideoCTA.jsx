@@ -6,8 +6,9 @@ import { usePlayList } from "../../hooks/Playlist/PlaylistContext"
 import { IconWatchLater } from "../WatchLater/IconWatchLater"
 import { PopupModal } from "../PopupModal/PopupPlaylist"
 import { useEffect } from 'react';
+import { useLiked } from '../../hooks/LikedVideo/LikedContext';
 export function VideoCTA({ video }) {
-
+    const { likedArray, setLikedArray, addToLiked, removeLiked,dislikeArray,addToDisliked,removeDisliked } = useLiked()
     const { showPlayListModal, setShowPlaylistModal } = usePlayList()
     useEffect(() => {
         if (showPlayListModal) {
@@ -17,35 +18,31 @@ export function VideoCTA({ video }) {
             document.body.style.overflow = "scroll"
         }
     }, [showPlayListModal])
-    var a = false;
+    var a = true;
     return <div className='video-cta-icons-container'>
-        <div className="card-description">6k views | {(video.duration/60).toFixed(2)} min </div>
+        <div className="card-description">6k views | {(video.duration / 60).toFixed(2)} min </div>
         <div className='video-cta-icons'>
-            <div>
+            <div className='liked-cta'>
                 {/* <div>
                 like
             </div> */}
-                {a === false ? <MDBIcon far icon="thumbs-up" /> :
-                    <MDBIcon icon="thumbs-up" />}
+                {likedArray.includes(video) ? <MDBIcon icon="thumbs-up" onClick={()=>removeLiked(likedArray,video)}/> :
+                    <MDBIcon far icon="thumbs-up" onClick={()=>addToLiked(likedArray,video)}/>}
             </div>
-            <div>
+            <div className='disliked-cta'>
                 {/* <div>
                 dislike
             </div> */}
-                {a === false ? <MDBIcon far icon="thumbs-down" /> :
-                    <MDBIcon icon="thumbs-down" />}
+                {dislikeArray.includes(video) ? <MDBIcon icon="thumbs-down" onClick={()=>removeDisliked(dislikeArray,video)}/> :
+                    <MDBIcon far icon="thumbs-down" onClick={()=>addToDisliked(dislikeArray,video)}/>}
 
             </div>
             <div className='watch-later-icon-cta'>
-                {/* <div>
-                watch later
-            </div> */}
+                {/*watch later */}
                 <IconWatchLater video={video} />
             </div>
             <div className='add-to-playlist-cta' onClick={() => setShowPlaylistModal(true)}>
-                {/* <div>
-                Playlist
-            </div> */}
+                {/* Playlist*/}
                 <MDBIcon icon="plus-circle" />
             </div>
         </div>

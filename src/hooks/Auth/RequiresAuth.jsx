@@ -6,5 +6,5 @@ export const RequiresAuth=()=>{
     useEffect(()=>{
         localStorage.getItem("clipoToken")
     })
-    return localStorage.getItem("clipoToken") ?<Outlet/> : <Navigate to="/signup" state={{from :location}} replace/>
+    return localStorage.getItem("clipoToken") ?<Outlet/> : <Navigate to="/signup" state={{from :location}} replace={true}/>
 }

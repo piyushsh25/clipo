@@ -7,7 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999999999999;
+    z-index: 99999;
   } 
    
   .modalContainer {
@@ -19,6 +19,9 @@
     display: flex;
     flex-direction: column;
     padding: 25px;
+  }
+  .modalContainer.login-modal{
+    height: 20rem;
   }
   .playlist-names{
     display: flex;

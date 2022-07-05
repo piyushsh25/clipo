@@ -10,13 +10,16 @@ export function PopupModal({ showPlayListModal, setShowPlaylistModal, videoToSav
     addToPlayList(video, playlist)
     setShowPlaylistModal(false)
   }
+  function setPopupFalse(setShowPlaylistModal){
+    setShowPlaylistModal(false)
+  }
   return (
     <div className="modalBackground">
       <div className="modalContainer">
         <div className="titleCloseBtn">
           <button
             onClick={() => {
-              setShowPlaylistModal(false);
+              setPopupFalse(setShowPlaylistModal);
             }}
           >
             <AiOutlineClose />
@@ -36,13 +39,13 @@ export function PopupModal({ showPlayListModal, setShowPlaylistModal, videoToSav
         <div className="footer">
           <button
             onClick={() => {
-              setShowPlaylistModal(false);
+              setPopupFalse(setShowPlaylistModal);
             }}
             id="cancelBtn"
           >
             Cancel
           </button>
-          <Link to="/playlist" onClick={()=>setShowPlaylistModal(false)}>
+          <Link to="/playlist" onClick={()=>setPopupFalse(setShowPlaylistModal)}>
             <button>Playlists</button></Link>
         </div>
       </div>

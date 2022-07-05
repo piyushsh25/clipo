@@ -6,5 +6,5 @@ export const RedirectRoute = () => {
     useEffect(() => {
         localStorage.getItem("clipoToken")
     })
-    return !(localStorage.getItem("clipoToken")) ? <Outlet /> : <LoggedIn />
+    return !(localStorage.getItem("clipoToken")) ? <Outlet replace={true}/> : <LoggedIn />
 }

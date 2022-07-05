@@ -1,24 +1,18 @@
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { MDBIcon } from "mdbreact"
-import { useWatchLater } from '../../hooks/WatchLater/WatchContext';
 import "./Video-CTA.css"
 import { usePlayList } from "../../hooks/Playlist/PlaylistContext"
 import { IconWatchLater } from "../WatchLater/IconWatchLater"
-import { PopupModal } from "../PopupModal/PopupPlaylist"
 import { useEffect } from 'react';
 import { useLiked } from '../../hooks/LikedVideo/LikedContext';
+import { useAuth } from '../../hooks/Auth/AuthContext';
 export function VideoCTA({ video }) {
-    const { likedArray, setLikedArray, addToLiked, removeLiked,dislikeArray,addToDisliked,removeDisliked } = useLiked()
-    const { showPlayListModal, setShowPlaylistModal } = usePlayList()
+    const { likedArray, addToLiked, removeLiked, dislikeArray, addToDisliked, removeDisliked } = useLiked()
+    const { setShowPlaylistModal } = usePlayList()
+    const { setShowLoginModal } = useAuth()
     useEffect(() => {
-        if (showPlayListModal) {
-            document.body.style.overflow = "hidden"
-        }
-        if (!showPlayListModal) {
-            document.body.style.overflow = "scroll"
-        }
-    }, [showPlayListModal])
-    var a = true;
+        localStorage.getItem("clipoToken")
+    })
     return <div className='video-cta-icons-container'>
         <div className="card-description">6k views | {(video.duration / 60).toFixed(2)} min </div>
         <div className='video-cta-icons'>
@@ -26,22 +20,22 @@ export function VideoCTA({ video }) {
                 {/* <div>
                 like
             </div> */}
-                {likedArray.includes(video) ? <MDBIcon icon="thumbs-up" onClick={()=>removeLiked(likedArray,video)}/> :
-                    <MDBIcon far icon="thumbs-up" onClick={()=>addToLiked(likedArray,video)}/>}
+                {likedArray.includes(video) ? <MDBIcon icon="thumbs-up" onClick={() => removeLiked(likedArray, video)} /> :
+                    <MDBIcon far icon="thumbs-up" onClick={() => localStorage.getItem("clipoToken") ? addToLiked(likedArray, video) : setShowLoginModal(true)} />}
             </div>
             <div className='disliked-cta'>
                 {/* <div>
                 dislike
             </div> */}
-                {dislikeArray.includes(video) ? <MDBIcon icon="thumbs-down" onClick={()=>removeDisliked(dislikeArray,video)}/> :
-                    <MDBIcon far icon="thumbs-down" onClick={()=>addToDisliked(dislikeArray,video)}/>}
+                {dislikeArray.includes(video) ? <MDBIcon icon="thumbs-down" onClick={() => removeDisliked(dislikeArray, video)} /> :
+                    <MDBIcon far icon="thumbs-down" onClick={() => localStorage.getItem("clipoToken") ? addToDisliked(dislikeArray, video) : setShowLoginModal(true)} />}
 
             </div>
             <div className='watch-later-icon-cta'>
                 {/*watch later */}
                 <IconWatchLater video={video} />
             </div>
-            <div className='add-to-playlist-cta' onClick={() => setShowPlaylistModal(true)}>
+            <div className='add-to-playlist-cta' onClick={() => localStorage.getItem("clipoToken") ? setShowPlaylistModal(true) : setShowLoginModal(true)}>
                 {/* Playlist*/}
                 <MDBIcon icon="plus-circle" />
             </div>

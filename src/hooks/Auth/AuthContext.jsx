@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import axios from "axios"
 const AuthContext = createContext()
 export const useAuth = () => useContext(AuthContext)
@@ -7,6 +7,17 @@ export const AuthProvider = ({ children }) => {
     const [lname, setlName] = useState("")
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+    const [showLoginModal, setShowLoginModal] = useState(false)
+    //the scroll property  was set to noscroll when false
+    useEffect(() => {
+        if (!showLoginModal) {
+            document.body.style.overflow = "scroll"
+        }
+        if (showLoginModal) {
+            document.body.style.overflow = "hidden"
+        }
+        
+    })
     async function submitSignupHandler(fname, lname, email, password, navigate, location) {
         try {
             //api call for response
@@ -31,7 +42,7 @@ export const AuthProvider = ({ children }) => {
 
 
     }
-    async function loginHandler(email, password,navigate,pathName) {
+    async function loginHandler(email, password, navigate, pathName) {
         try {
             const { data } = await axios.post("/api/auth/login", {
                 email, password
@@ -46,11 +57,12 @@ export const AuthProvider = ({ children }) => {
             console.log(err)
         }
     }
-    function logoutHandler(navigate){
+    function logoutHandler(navigate) {
         navigate("/")
         localStorage.clear()
     }
-    return <AuthContext.Provider value={{ fname, setfName, lname, setlName, email, setEmail, password, setPassword, submitSignupHandler, loginHandler,logoutHandler }}>
+
+    return <AuthContext.Provider value={{ fname, setfName, lname, setlName, email, setEmail, password, setPassword, submitSignupHandler, loginHandler, logoutHandler, showLoginModal, setShowLoginModal }}>
         {children}
     </AuthContext.Provider>
 }

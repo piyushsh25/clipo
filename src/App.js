@@ -8,8 +8,8 @@ import { PlayListUnique } from "./pages/IndividualPlaylist/Saved";
 import { Signup } from "./pages/Signup/Signup";
 import { VideoPage } from "./pages/VideoPage/VideoPage";
 import { WatchLater } from "./pages/WatchLater/WatchLater";
-import { CreatePlaylist } from "./pages/CreatePlayList/CreatePlaylist";
 import { Error } from "./pages/ErrorPage/Error";
+import { Liked } from "./pages/Liked/Liked";
 function App() {
   return (
     <div className="App">
@@ -25,7 +25,8 @@ function App() {
       <Route path="/video/:videoId" element={<VideoPage/>}/>
       <Route path="/login" element={<Login/>}/>
       <Route path="/signup" element={<Signup/>}/>
-      <Route path="/create-playlist" element={<CreatePlaylist/>}/>
+      
+      <Route path="/liked" element={<Liked/>}/>
       <Route path="*" element={<Error/>} />
     </Routes>
   </BrowserRouter>

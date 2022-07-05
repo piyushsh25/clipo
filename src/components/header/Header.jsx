@@ -42,7 +42,7 @@ export function ClipoHeader() {
                     </Link>
                   </div>
                   <div className="nav-item dropdown-item">
-                    <Link to="/history" className="header-links home header-links home nav-link">
+                    <Link to="/liked" className="header-links home header-links home nav-link">
                      liked video
                     </Link>
                   </div>

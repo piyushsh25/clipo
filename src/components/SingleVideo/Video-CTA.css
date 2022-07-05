@@ -41,5 +41,8 @@
     cursor: pointer;
 }
 div.card-description{
-    font-size: 1.5rem;
+    font-size: 1rem;
+}
+.disliked-cta,.liked-cta{
+  cursor: pointer;
 }

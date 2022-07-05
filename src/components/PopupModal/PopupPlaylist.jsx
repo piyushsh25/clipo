@@ -42,7 +42,7 @@ export function PopupModal({ showPlayListModal, setShowPlaylistModal, videoToSav
           >
             Cancel
           </button>
-          <Link to="/playlist">
+          <Link to="/playlist" onClick={()=>setShowPlaylistModal(false)}>
             <button>Playlists</button></Link>
         </div>
       </div>

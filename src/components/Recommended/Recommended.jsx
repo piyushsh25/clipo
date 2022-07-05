@@ -40,13 +40,11 @@ export function RecommendedVideos() {
                                 <Card.Title>{video.title.slice(0, 40)}...</Card.Title>
                                 <div className="card-description">6k views | {(video.duration / 60).toFixed(2)} min </div>
                             </Card.Body>
-                            <Button variant="secondary" size="lg" onClick={() => saveToPlaylist(video)}>
-                                 <Link className='watch-now-link' onClick={() => addToHistory(video)} to={`/video/${video._id}`}>
-                                Watch now
+                            <Link className='watch-now-link watch-now' onClick={() => addToHistory(video)} to={`/video/${video._id}`}>
+                                <Button variant="secondary" size="lg" className="watch-now-button">
+                                    Watch now
+                                </Button>
                             </Link>
-                            </Button>
-                           
-
                             <Button variant="info" size="lg" onClick={() => saveToPlaylist(video)}>
                                 save to playlist
                             </Button>

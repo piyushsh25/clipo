@@ -44,6 +44,9 @@
   border-radius: 0;
   width: 100%;
 }
+.btn.btn-secondary.btn-lg.watch-now-button{
+  width: 100%;
+}
 .btn.btn-secondary.btn-lg,.btn.btn-info.btn-lg{
   border-radius: 0;
 }

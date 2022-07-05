@@ -1,10 +1,19 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { v4 as uuid } from "uuid";
 const PlaylistContext = createContext();
 export const PlaylistProvider = ({ children }) => {
     const [playlistArr, setPlaylistArr] = useState([]);
     const [playlistName, setPlaylistName] = useState([])
     const [showPlayListModal, setShowPlaylistModal] = useState(false)
+    useEffect(() => {
+        if (!showPlayListModal) {
+            document.body.style.overflow = "scroll"
+        }
+        if (showPlayListModal) {
+            document.body.style.overflow = "hidden"
+        }
+        
+    })
     function addToPlayList(video, categoryname) {
         //to check if the video is already in the selected playlist
         let isVideoPresent = false;

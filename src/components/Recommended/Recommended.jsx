@@ -9,10 +9,13 @@ import { PopupModal } from '../PopupModal/PopupPlaylist';
 import { usePlayList } from '../../hooks/Playlist/PlaylistContext';
 import { useHistory } from '../../hooks/History/HistoryContext';
 import { IconWatchLater } from '../WatchLater/IconWatchLater';
+import { LoginModal } from '../PopupModal/LoginModal';
+import { useAuth } from '../../hooks/Auth/AuthContext';
 export function RecommendedVideos() {
     const { FilteredVideo } = useFilterContext();
     const { showPlayListModal, setShowPlaylistModal } = usePlayList();
     const [videoToSave, setVideoToSave] = useState(null);
+    const { showLoginModal, setShowLoginModal } = useAuth();
     useEffect(() => {
         if (showPlayListModal) {
             document.body.style.overflow = "hidden"
@@ -20,10 +23,18 @@ export function RecommendedVideos() {
         if (!showPlayListModal) {
             document.body.style.overflow = "scroll"
         }
+
     }, [showPlayListModal])
+    useEffect(() => {
+        localStorage.getItem("clipoToken")
+    })
     function saveToPlaylist(video) {
-        setVideoToSave(video)
-        setShowPlaylistModal(true)
+        if (localStorage.getItem("clipoToken")) {
+            setVideoToSave(video)
+            setShowPlaylistModal(true)
+        } else {
+            setShowLoginModal(true)
+        }
     }
     const { addToHistory } = useHistory()
     return (
@@ -54,6 +65,7 @@ export function RecommendedVideos() {
 
             </div>
             {showPlayListModal && <PopupModal showPlayListModal={showPlayListModal} setShowPlaylistModal={setShowPlaylistModal} videoToSave={videoToSave} />}
+            {showLoginModal && <LoginModal />}
         </div>
     );
 }

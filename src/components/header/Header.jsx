@@ -1,8 +1,15 @@
 import { Navbar, Button, FormControl, Container, Offcanvas, Nav, NavDropdown, Form } from "react-bootstrap"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./header.css"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
+import { useEffect } from "react"
+import { useAuth } from "../../hooks/Auth/AuthContext"
 export function ClipoHeader() {
+  useEffect(() => {
+    localStorage.getItem("clipoToken")
+  })
+  const { logoutHandler } = useAuth()
+  const navigate = useNavigate()
   return <div className="header-all">
     {['xxl'].map((expand) => (
       <Navbar key={expand} bg="light" expand={expand} className="mb-3 navbar-all" fixed="top">
@@ -43,7 +50,7 @@ export function ClipoHeader() {
                   </div>
                   <div className="nav-item dropdown-item">
                     <Link to="/liked" className="header-links home header-links home nav-link">
-                     liked video
+                      liked video
                     </Link>
                   </div>
                   <div className="nav-item dropdown-item">
@@ -52,9 +59,17 @@ export function ClipoHeader() {
                     </Link>
                   </div>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action6">
-                    Signout/Logout
-                  </NavDropdown.Item>
+                  {!localStorage.getItem("clipoToken") ? <div className="nav-item dropdown-item">
+                    <Link to="/login" className="header-links home header-links home nav-link">
+                      login
+                    </Link>
+                  </div>
+                    : <div className="nav-item dropdown-item">
+                      <div className="header-links home header-links home nav-link" onClick={() => logoutHandler(navigate)}>
+                        logout
+                      </div>
+
+                    </div>}
                 </NavDropdown>
               </Nav>
               <Form className="d-flex">

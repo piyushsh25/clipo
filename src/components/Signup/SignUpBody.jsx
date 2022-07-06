@@ -6,7 +6,7 @@ export function SignUpBody() {
     const { fname, setfName, lname, setlName, email, setEmail, password, setPassword, submitSignupHandler } = useAuth()
     const location = useLocation()
     const navigate = useNavigate()
-    const pathName = location?.state?.from?.pathname || ""
+    const pathName = location?.state?.from?.pathname || "/"
     return <Form className="signup-form">
         <Navbar.Brand href="#" className="header-header-name login-header"><span className="header-first-word">My</span> Clipo</Navbar.Brand>
         <Row className="mb-3">

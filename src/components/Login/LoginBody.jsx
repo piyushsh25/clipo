@@ -6,7 +6,7 @@ export function LoginBody() {
     const {email,setEmail,password,setPassword,loginHandler}=useAuth()
     const location=useLocation()
     const navigate=useNavigate()
-    const pathName=location?.state || "/"
+    const {pathName}=location?.state || "/"
     return <div><Form className="login-form">
         <Navbar.Brand href="#" className="header-header-name login-header"><span className="header-first-word">My</span> Clipo</Navbar.Brand>
         <Form.Group className="mb-3" controlId="formBasicEmail">

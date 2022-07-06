@@ -85,3 +85,17 @@ export const removeItemFromLikedVideos = function (schema, request) {
     { errors: ["The user you request does not exist. Not Found error."] }
   );
 };
+
+//clear liked 
+export const clearLiked = function (schema, request) {
+  const user = requiresAuth.call(this, request);
+  if (user) {
+    this.db.users.update({ likes: [] });
+    return new Response(200, {}, { likes: [] });
+  }
+  return new Response(
+    404,
+    {},
+    { errors: ["The user you request does not exist. Not Found error."] }
+  );
+};

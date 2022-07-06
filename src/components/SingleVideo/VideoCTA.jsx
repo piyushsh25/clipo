@@ -13,6 +13,8 @@ export function VideoCTA({ video }) {
     useEffect(() => {
         localStorage.getItem("clipoToken")
     })
+    let isLikedVideo;
+
     return <div className='video-cta-icons-container'>
         <div className="card-description">6k views | {(video.duration / 60).toFixed(2)} min </div>
         <div className='video-cta-icons'>
@@ -20,7 +22,12 @@ export function VideoCTA({ video }) {
                 {/* <div>
                 like
             </div> */}
-                {likedArray.includes(video) ? <MDBIcon icon="thumbs-up" onClick={() => removeLiked(likedArray, video)} /> :
+                {
+                    isLikedVideo = likedArray.some((videos) => {
+                        return videos._id === video._id
+                    })
+                }
+                {isLikedVideo ? <MDBIcon icon="thumbs-up" onClick={() => removeLiked(likedArray, video)} /> :
                     <MDBIcon far icon="thumbs-up" onClick={() => localStorage.getItem("clipoToken") ? addToLiked(likedArray, video) : setShowLoginModal(true)} />}
             </div>
             <div className='disliked-cta'>

@@ -23,6 +23,7 @@ import {
   getLikedVideosHandler,
   addItemToLikedVideos,
   removeItemFromLikedVideos,
+  clearLiked
 } from "./backend/controllers/LikeController";
 import {
   getAllPlaylistsHandler,
@@ -93,6 +94,7 @@ export function makeServer({ environment = "development" } = {}) {
       this.get("/user/likes", getLikedVideosHandler.bind(this));
       this.post("/user/likes", addItemToLikedVideos.bind(this));
       this.delete("/user/likes/:videoId", removeItemFromLikedVideos.bind(this));
+      this.delete("/user/likes", clearLiked.bind(this));
 
       // watch later routes (private)
       this.get("/user/watchlater", getWatchLaterVideosHandler.bind(this));

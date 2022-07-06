@@ -19,7 +19,7 @@ export const HistoryProvider = ({ children }) => {
         }
         // setHistoryArray([...historyArray, video])
     }
-        async function clearHistory() {
+    async function clearHistory() {
         try {
             const clearHistoryVideos = await axios.delete(`/api/user/history/all`,
                 {
@@ -66,7 +66,7 @@ export const HistoryProvider = ({ children }) => {
                 console.log("error from get history", err)
             }
         }
-        getHistoryHandler()
+        localStorage.getItem("clipoToken") && getHistoryHandler()
     }, [historyArray])
     return <HistoryContext.Provider value={{ historyArray, setHistoryArray, addToHistory, clearHistory, removeHistoryVideo }}>
         {children}

@@ -5,15 +5,17 @@ export const useWatchLater = () => useContext(WatchContext)
 export const WatchProvider = ({ children }) => {
     const [watchLaterArray, setWatchLaterArray] = useState([])
     async function removeFromLater(toDelete) {
-        const {_id:videoId}=toDelete
-        try{
-            const remainingWatchLater=await axios.delete(`/api/user/watchlater/${videoId}`,
-            {headers:{
-               authorization:localStorage.getItem("clipoToken") 
-            }})
+        const { _id: videoId } = toDelete
+        try {
+            const remainingWatchLater = await axios.delete(`/api/user/watchlater/${videoId}`,
+                {
+                    headers: {
+                        authorization: localStorage.getItem("clipoToken")
+                    }
+                })
             setWatchLaterArray(remainingWatchLater.data.watchlater)
-        }catch(error){
-            console.log("ERROR FROM REMOVER FROM LATER",error)
+        } catch (error) {
+            console.log("ERROR FROM REMOVER FROM LATER", error)
         }
         // const videoToBeRemoved = watchLaterArray.filter((video) => {
         //     return video !== toDelete
@@ -21,16 +23,18 @@ export const WatchProvider = ({ children }) => {
         // setWatchLaterArray(videoToBeRemoved)
     }
     async function removeAllWatchLater() {
-        try{
-            const clearVideos=await axios.delete("/api/user/watchlater",
-            {headers:{
-                authorization: localStorage.getItem("clipoToken")
-            }})
+        try {
+            const clearVideos = await axios.delete("/api/user/watchlater",
+                {
+                    headers: {
+                        authorization: localStorage.getItem("clipoToken")
+                    }
+                })
             setWatchLaterArray(clearVideos.data.watchlater)
-        }catch(err){
-            console.log("ERROR FROM REMOVE ALL WATCH LATER",err)
+        } catch (err) {
+            console.log("ERROR FROM REMOVE ALL WATCH LATER", err)
         }
-        
+
     }
     async function addToLater(video) {
         try {
@@ -66,7 +70,7 @@ export const WatchProvider = ({ children }) => {
             }
 
         }
-        getWatchLaterHandler()
+        localStorage.getItem("clipoToken") && getWatchLaterHandler()
     }, [watchLaterArray])
     return <WatchContext.Provider value={{ watchLaterArray, setWatchLaterArray, removeFromLater, addToLater, removeAllWatchLater }}>
         {children}

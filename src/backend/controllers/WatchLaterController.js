@@ -88,3 +88,18 @@ export const removeItemFromWatchLaterVideos = function (schema, request) {
     { errors: ["The user you request does not exist. Not Found error."] }
   );
 };
+
+
+// clear watch later
+export const clearWatchLater = function (schema, request) {
+  const user = requiresAuth.call(this, request);
+  if (user) {
+    this.db.users.update({ watchlater: [] });
+    return new Response(200, {}, { watchlater: [] });
+  }
+  return new Response(
+    404,
+    {},
+    { errors: ["The user you request does not exist. Not Found error."] }
+  );
+};

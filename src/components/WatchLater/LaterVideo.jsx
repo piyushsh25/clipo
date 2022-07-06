@@ -12,7 +12,7 @@ export function WatchLaterArray() {
             <div className='recommended-videos'>
                 {watchLaterArray.length === 0 ? <NotAvailable message={"Empty watch later"} /> :
                     watchLaterArray.map((video) => {
-                        return <Card className="card">
+                        return <Card className="card" key={video._id}>
                             <Card.Img variant="top" src={video.thumbnail} />
                             <IconWatchLater video={video} />
                             {/* <i className="fas fa-heart-square"></i> */}

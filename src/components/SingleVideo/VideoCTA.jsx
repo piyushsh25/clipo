@@ -14,7 +14,6 @@ export function VideoCTA({ video }) {
         localStorage.getItem("clipoToken")
     })
     let isLikedVideo;
-
     return <div className='video-cta-icons-container'>
         <div className="card-description">6k views | {(video.duration / 60).toFixed(2)} min </div>
         <div className='video-cta-icons'>

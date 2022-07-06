@@ -38,6 +38,7 @@ import {
   addItemToWatchLaterVideos,
   getWatchLaterVideosHandler,
   removeItemFromWatchLaterVideos,
+  clearWatchLater,
 } from "./backend/controllers/WatchLaterController";
 export function makeServer({ environment = "development" } = {}) {
   return new Server({
@@ -102,6 +103,10 @@ export function makeServer({ environment = "development" } = {}) {
       this.delete(
         "/user/watchlater/:videoId",
         removeItemFromWatchLaterVideos.bind(this)
+      );
+      this.delete(
+        "/user/watchlater/",
+        clearWatchLater.bind(this)
       );
 
       // playlist routes (private)

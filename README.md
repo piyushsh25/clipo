@@ -48,15 +48,15 @@ Signup:
 
 A user can add any video to watch later. 
 
-Bookmarks: 
-![Bookmark Page](./screenshots/Screenshot%20(266).png)
+Watch later: 
+![Bookmark Page](./screenshots/Screenshot%20(6).png)
 
 ### Video Page.
 A user can watch the video in this page 
 
 Video Page:
 
-![Video Page](./screenshots/Screenshot%20(264).png)
+![Video Page](./screenshots/Screenshot%20(7).png)
 
 ### History Page.
 

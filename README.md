@@ -26,7 +26,7 @@ This page fetches videos databse. If the user is logged in. The user can view th
 
 
 Home Page:
-![Home Page](./screenshots/Screenshot%202022-09-26%20092143.png)
+![Home Page](./screenshots/Screenshot%202022-09-26%20110806.png)
 
 
 ### Login/Signup
@@ -36,12 +36,12 @@ The user can login to their existing accout or create a new account. A unique JW
 Login :
 
 
-![Login](./screenshots/Screenshot%202022-09-26%20101218.png)
+![Login](./screenshots/Screenshot%20(267).png)
 
 Signup: 
 
 
-![Signup](./screenshots/Screenshot%202022-09-26%20101236.png)
+![Signup](./screenshots/Screenshot%20(268).png)
 
 
 ### Watch Later.
@@ -64,7 +64,7 @@ The watch history of the user is tracked and is rendered in this page.
 
 History page  :
 
-![History page ](./screenshots/Screenshot%202022-09-26%20101650.png)
+![History page ](./screenshots/Screenshot%20(2).png)
 
 
 ### Liked Page.
@@ -73,7 +73,7 @@ A user can like a video from the video page.
 
 Liked Page :
 
-![Liked Page ](./screenshots//Screenshot%202022-09-26%20101236.png)
+![Liked Page ](./screenshots/Screenshot%20(3).png)
 
 ### Playlist Page.
 
@@ -81,7 +81,8 @@ This page has a list of playlist created and by the used and videos inside the i
 
 Playlist Page :  
 
-![Playlist Page](./screenshots/Screenshot%202022-09-26%20102540.png)
+![Playlist Page](./screenshots/Screenshot%20(4).png)
+![Playlist Page](./screenshots/Screenshot%20(5).png)
 
 
 ## Contributing

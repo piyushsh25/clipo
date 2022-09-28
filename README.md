@@ -9,6 +9,8 @@ Tech Stack: ReactJS, contextAPI.
 Login as guest:
 
 id: admin@clipo.com
+
+
 password: clipo
 
 
@@ -84,14 +86,17 @@ History page  :
 ### Liked Page.
 
 A user can like a check liked video from this page.[considering the user has logged in] 
-If the user tries accessing this route and the user is not logged in, a modal will popup asking the user to login
+If the user tries accessing this route and the user is not logged in, a modal will popup asking the user to login.
+
 Liked Page :
 
 ![Liked Page ](./screenshots/Screenshot%20(3).png)
 
 ### Playlist Page.
 
-This page has a list of playlist created by the user. The user can add video(s) by selecting add to playlist from the call-to-action in . 
+This page has a list of playlist created by the user. The user can add video(s) by selecting add to playlist from the call-to-action button in videos.  
+If the user tries accessing this function and the user is not logged in, a modal will popup asking the user to login.
+
 
 Playlist Page :  
 
